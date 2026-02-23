@@ -22,7 +22,7 @@ CR n|123|3 = 1 + f(12)
 
 </details>
 
-## Pseudocódigo & código
+## Pseudocódigo
 
 <details>
 <summary>Ver pseudocódigo</summary>

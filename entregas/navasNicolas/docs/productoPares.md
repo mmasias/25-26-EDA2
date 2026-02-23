@@ -24,7 +24,7 @@ CR n|6|48 = 2x4x6
 
 </details>
 
-## Pseudocódigo & código
+## Pseudocódigo
 
 <details>
 <summary>Ver pseudocódigo</summary>
