@@ -2,10 +2,27 @@
 
 > *Entiéndase "deberíamos saber" como una combinación de "nos debería sonar", "no nos debería sorprender", "deberíamos conocer", "deberíamos saber manejar", en función del tema abordado. En cualquier caso, lo mínimo es "no nos debería sorprender" y deberíamos poder tener una mínima conversación o lectura sobre estos temas.*
 
+## 23 febrero
+
+- Identificar y ser capaces de llamar formalmente a los elementos que conforman un caso de recursividad.
+- Cómo inferir y qué implica el tener más de un caso base y/o más de un caso recursivo.
+- Cuántas formas existen para "tender hacia el caso base" a partir de un escenario concreto, y cómo simplifican (o complican).
+
+## 18 febrero
+
+- Cómo encontrar la recursividad: el método tabular.
+
+## 16 febrero
+
+- Fundamentos de recursividad
+  - El procesamiento recursivo, el caso base, el caso recursivo.
+  - La pila de llamadas.
+
 ## 11 febrero
 
-- La necesidad de patrones.
-- Los patrones secuencial, recurrente, iterativo y recursivo.
+- Inducción a la recursividad
+  - La necesidad de patrones.
+  - Los patrones secuencial, recurrente, iterativo y recursivo.
 
 ## 9 febrero
 
