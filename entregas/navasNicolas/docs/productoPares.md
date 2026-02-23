@@ -46,24 +46,3 @@ FIN FUNCIÓN
 ```
 
 </details> 
-<details> <summary>Ver código Java</summary>
-
-```
-public class ProductoPares {
-
-    public static int calcularProductoPares(int n) {
-        if (n <= 0) {
-            return 1;
-        }
-        if (n % 2 != 0) {
-            return calcularProductoPares(n - 1);
-        }
-        return n * calcularProductoPares(n - 2);
-    }
-
-    public static void main(String[] args) {
-        int numero = 6;
-        System.out.println("El producto de pares hasta " + numero + " es: " + calcularProductoPares(numero));
-    }
-}
-```
