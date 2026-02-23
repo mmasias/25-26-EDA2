@@ -11,4 +11,4 @@ Rama de entregas de retos y ejercicios de la asignatura **Estructura de datos y 
 ### [Código](entregas/recursividad-2think/cuestaAlejandra/src/Recursividad2Think.java).
 ### [UML](entregas/recursividad-2think/cuestaAlejandra/modelosUML/diagrama-clases.puml).
 ### [Diagrama](entregas/recursividad-2think/cuestaAlejandra/images/diagrama-clases.png).
-### [Explicación Recursividad](entregas/recursividad-2think/cuestaAlejandra/docs/codigo-recursividad.md).
+### [Explicación Recursividad](entregas/recursividad-2think/cuestaAlejandra/docs/explicacion-recursividad.md).
