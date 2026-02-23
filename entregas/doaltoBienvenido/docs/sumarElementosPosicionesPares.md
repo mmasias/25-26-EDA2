@@ -6,7 +6,7 @@ En una lista, sumar los elementos que se encuentran en posiciones pares (0, 2, 4
 
 | Caso   | n        | f(n)         |
 | ------ | -------- | ------------ |
-| CB     | " "      | 0            |
+| CB     | ""       | 0            |
 | ...    |          |              |
 | CR n-1 | [1,2,3]  | 1 + 3 = 4    |
 | CR n   | [1,2,3,4]| 1 + 3 = 4    |

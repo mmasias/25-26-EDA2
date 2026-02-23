@@ -5,7 +5,7 @@ En una lista, duplicar sus elementos (ej:([1,2,3] convertirla en [1,1,2,2,3,3]))
 
 | Caso   | n    | f(n)   |
 | ------ | ---- | ------ |
-| CB     | "  " | " "    |
+| CB     | ""   |   ""   |
 | ...    |      |        |
 | CR n-1 | 12   | 1122   |
 | CR n   | 123  | 112233 |

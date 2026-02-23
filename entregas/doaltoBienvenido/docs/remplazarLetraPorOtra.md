@@ -6,7 +6,7 @@ En una palabra/frase, reemplazar una letra por otra
 
 | Caso   | n        |   f(n)    |
 | ------ | -------- |-----------|
-| CB     | "  "     |  " "      |
+| CB     | ""       |   ""      |
 | ...    |          |           |
 | CR n-1 | "pepe"   |  "papa"   |
 | CR n   | "epepe"  |  "apapa"  |

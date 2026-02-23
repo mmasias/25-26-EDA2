@@ -6,7 +6,7 @@ Calcular la cantidad de cifras de un número entero positivo.
 
 | Caso   | n      | f(n) |
 | ------ | ------ | ---- |
-| CB     | "  "   | TRUE |
+| CB     | ""     | TRUE |
 | ...    |        |      |
 | CR n-1 | bccb   | TRUE |
 | CR n   | abccba | TRUE |
