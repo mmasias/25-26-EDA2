@@ -12,15 +12,11 @@ Calcular el número de dígitos que tiene un número entero.
 <div align=center>
 
 
-||n|f(n)|
-
-|-|-:|-|
-
-CB|0 a 9|1
-
-CR n/10|12|2
-
-CR n|123|3
+|         |     n | f(n) |
+| ------- | ----: | ---- |
+| CB      | 0 a 9 | 1    |
+| CR n/10 |    12 | 2    |
+| CR n    |   123 | 3    |
 
 
 

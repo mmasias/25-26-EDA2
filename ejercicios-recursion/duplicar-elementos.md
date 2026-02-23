@@ -12,15 +12,11 @@ Dada una lista, duplicar cada uno de sus elementos (ej: [1,2,3] -> [1,1,2,2,3,3]
 <div align=center>
 
 
-||lista|f(lista)|
-
-|-|-:|-|
-
-CB|[]|[]
-
-CR resto| [2,3] | [2,2,3,3]
-
-CR completa| [1,2,3] | [1,1,2,2,3,3]
+|             |   lista | f(lista)      |
+| ----------- | ------: | ------------- |
+| CB          |      [] | []            |
+| CR resto    |   [2,3] | [2,2,3,3]     |
+| CR completa | [1,2,3] | [1,1,2,2,3,3] |
 
 
 

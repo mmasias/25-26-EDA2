@@ -12,15 +12,11 @@ Determinar si una palabra o frase es un palíndromo (se lee igual de izquierda a
 <div align=center>
 
 
-||palabra|f(palabra)|
-
-|-|-:|-|
-
-CB|"" o "a"|verdadero
-
-CR interior| "aba" | verdadero
-
-CR completa| "radar"| verdadero (r == r y "ada" es palíndromo)
+|             |  palabra | f(palabra)                               |
+| ----------- | -------: | ---------------------------------------- |
+| CB          | "" o "a" | verdadero                                |
+| CR interior |    "aba" | verdadero                                |
+| CR completa |  "radar" | verdadero (r == r y "ada" es palíndromo) |
 
 
 

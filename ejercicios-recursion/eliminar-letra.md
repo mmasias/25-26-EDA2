@@ -12,15 +12,11 @@ Eliminar todas las apariciones de una letra específica en una palabra o frase.
 <div align=center>
 
 
-||palabra|f(palabra, letra)|
-
-|-|-:|-|
-
-CB|""|""
-
-CR resto| "casa" (si letra es 'a')| "cs"
-
-CR completa| "acasa" | "cs"
+|             |                  palabra | f(palabra, letra) |
+| ----------- | -----------------------: | ----------------- |
+| CB          |                       "" | ""                |
+| CR resto    | "casa" (si letra es 'a') | "cs"              |
+| CR completa |                  "acasa" | "cs"              |
 
 
 

@@ -12,17 +12,12 @@ Convertir un número entero positivo a su representación binaria (como cadena d
 <div align=center>
 
 
-||n|f(n)|
-
-|-|-:|-|
-
-CB|0| "0"
-
-CB|1| "1"
-
-CR n/2| 6 | "110"
-
-CR n| 13 | "1101"
+|        |    n | f(n)   |
+| ------ | ---: | ------ |
+| CB     |    0 | "0"    |
+| CB     |    1 | "1"    |
+| CR n/2 |    6 | "110"  |
+| CR n   |   13 | "1101" |
 
 
 

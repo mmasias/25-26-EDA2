@@ -12,15 +12,11 @@ Calcular el cuadrado de un número n utilizando la propiedad de que n² = (n-1)�
 <div align=center>
 
 
-||n|f(n)|
-
-|-|-:|-|
-
-CB|0|0
-
-CR n-1|4|16
-
-CR n|5|25 = 16 + 2(5) - 1
+|        |    n | f(n)               |
+| ------ | ---: | ------------------ |
+| CB     |    0 | 0                  |
+| CR n-1 |    4 | 16                 |
+| CR n   |    5 | 25 = 16 + 2(5) - 1 |
 
 
 
@@ -52,7 +48,7 @@ FUNCION elevarCuadrado(n)
 
     FIN SI
 
-
+    
     Devolver elevarCuadrado(n - 1) + 2 * n - 1
 
 

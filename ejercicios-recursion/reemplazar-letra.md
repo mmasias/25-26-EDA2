@@ -12,15 +12,11 @@ Reemplazar todas las apariciones de una letra por otra en una palabra o frase.
 <div align=center>
 
 
-||palabra|f(palabra, vieja, nueva)|
-
-|-|-:|-|
-
-CB|""|""
-
-CR resto| "casa" (a -> e)| "cese"
-
-CR completa| "acasa" | "ecese"
+|             |         palabra | f(palabra, vieja, nueva) |
+| ----------- | --------------: | ------------------------ |
+| CB          |              "" | ""                       |
+| CR resto    | "casa" (a -> e) | "cese"                   |
+| CR completa |         "acasa" | "ecese"                  |
 
 
 
