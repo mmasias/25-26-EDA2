@@ -1,4 +1,4 @@
-## 2DO
+## 2DO.
 
 - [Contar cifras de un número](docs/contarCifrasNumero.md)
 - [Convertir a binario](docs/convertirBinario.md)
