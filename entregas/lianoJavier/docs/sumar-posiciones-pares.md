@@ -1,7 +1,7 @@
 # sumar posiciones pares
 
 
-Sumar los elementos de una lista que se encuentran en posiciones pares (0, 2, 4...).
+Sumar los elementos de una lista que se encuentran en posiciones pares (segunda, cuarta, sexta...).
 
 
 <details>
@@ -12,15 +12,16 @@ Sumar los elementos de una lista que se encuentran en posiciones pares (0, 2, 4.
 <div align=center>
 
 
-|             |       lista | f(lista)                                                 |
-| ----------- | ----------: | -------------------------------------------------------- |
-| CB          |          [] | 0                                                        |
-| CR resto    |     [3,4,5] | 5 (salta el 3 y el 4 no es par relativo al inicio total) |
-| CR completa | [1,2,3,4,5] | 1 + 3 + 5 = 9                                            |
+|          |         lista | f(lista)                          |
+| -------- | ------------: | --------------------------------- |
+| CB       |        [a, b] | b                                 |
+| ...      |           ... | ...                               |
+| CR resto |     [3,4,5,6] | 10 (2ª pos=4, 4ª pos=6)           |
+| CR n     | [1,2,3,4,5,6] | 12 (2ª pos=2, 4ª pos=4, 6ª pos=6) |
 
 
 
-f(lista) = lista[0] + f(lista[2:])
+12 = 2 + 10 *o lo que es igual* **lista[n] + sumarPares(n-2)** (Siendo n par; en caso contrario se resta 1 antes de empezar a n. Siendo n el tamaño de la lista partiendo de 0.)
 
 
 </div>
@@ -42,21 +43,18 @@ f(lista) = lista[0] + f(lista[2:])
 FUNCION sumarPares(lista)
 
 
-    SI lista es vacía ENTONCES
+    SI longitud(lista) < 2 ENTONCES
 
-        Devolver 0
+        Resultado = 0
 
-    FIN SI
+    SINO
 
-
-    SI longitud(lista) == 1 ENTONCES
-
-        Devolver lista[0]
+        Resultado = lista[1] + sumarPares(lista[2...n-2])
 
     FIN SI
 
 
-    Devolver lista[0] + sumarPares(lista[2:])
+    Devolver Resultado
 
 
 FIN FUNCIÓN

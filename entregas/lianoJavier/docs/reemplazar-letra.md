@@ -12,15 +12,16 @@ Reemplazar todas las apariciones de una letra por otra en una palabra o frase.
 <div align=center>
 
 
-|             |         palabra | f(palabra, vieja, nueva) |
-| ----------- | --------------: | ------------------------ |
-| CB          |              "" | ""                       |
-| CR resto    | "casa" (a -> e) | "cese"                   |
-| CR completa |         "acasa" | "ecese"                  |
+|          | palabra | f(p, 'a', 'e') |
+| -------- | ------: | -------------- |
+| CB       |      "" | ""             |
+| ...      |     ... | ...            |
+| CR resto |  "nana" | "nene"         |
+| CR n     | "anana" | "enene"        |
 
 
 
-f(palabra) = (nueva + f(resto)) if char == vieja else (char + f(resto))
+"enene" = 'e' + "nene" *o lo que es igual* **nueva + reemplazarLetra(resto, vieja, nueva)**
 
 
 </div>
@@ -44,20 +45,24 @@ FUNCION reemplazarLetra(palabra, vieja, nueva)
 
     SI palabra es vacía ENTONCES
 
-        Devolver ""
-
-    FIN SI
-
-
-    SI palabra[0] == vieja ENTONCES
-
-       Devolver nueva + reemplazarLetra(palabra[1:], vieja, nueva)
+        Resultado = ""
 
     SINO
 
-       Devolver palabra[0] + reemplazarLetra(palabra[1:], vieja, nueva)
+        SI palabra[0] == vieja ENTONCES
+
+           Resultado = nueva + reemplazarLetra(palabra[1...n-1], vieja, nueva)
+
+        SINO
+
+           Resultado = palabra[0] + reemplazarLetra(palabra[1...n-1], vieja, nueva)
+
+        FIN SI
 
     FIN SI
+
+
+    Devolver Resultado
 
 
 FIN FUNCIÓN

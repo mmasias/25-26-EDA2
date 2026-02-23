@@ -12,15 +12,16 @@ Calcular el producto de todos los números pares positivos desde 2 hasta n.
 <div align=center>
 
 
-|        |    n | f(n)                             |
-| ------ | ---: | -------------------------------- |
-| CB     |    0 | 1 (Elemento neutro del producto) |
-| CR n-2 |    4 | 8 = 4 * 2                        |
-| CR n   |    6 | 48 = 6 * 8                       |
+|        |    n | f(n) |
+| ------ | ---: | ---- |
+| CB     |    2 | 2    |
+| ...    |  ... | ...  |
+| CR n-2 |    4 | 8    |
+| CR n   |    6 | 48   |
 
 
 
-48 = 6 * f(n-2) *o lo que es igual* **n * productoPares(n - 2)**
+48 = 6 * 8 *o lo que es igual* **n * productoPares(n - 2)**
 
 
 </div>
@@ -42,21 +43,26 @@ Calcular el producto de todos los números pares positivos desde 2 hasta n.
 FUNCION productoPares(n)
 
 
-    SI n < 2 ENTONCES
+    SI n <= 2 ENTONCES
 
-        Devolver 1
+        Resultado = 2
+
+    SINO
+
+        SI n % 2 != 0 ENTONCES
+
+            Resultado = productoPares(n - 1)
+
+        SINO
+
+            Resultado = n * productoPares(n - 2)
+
+        FIN SI
 
     FIN SI
 
 
-    SI n % 2 != 0 ENTONCES
-
-        Devolver productoPares(n - 1)
-
-    FIN SI
-
-
-    Devolver n * productoPares(n - 2)
+    Devolver Resultado
 
 
 FIN FUNCIÓN

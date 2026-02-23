@@ -1,7 +1,7 @@
 # conversor a binario
 
 
-Convertir un número entero positivo a su representación binaria (como cadena de texto).
+Convertir un número entero positivo a su representación binaria.
 
 
 <details>
@@ -14,14 +14,14 @@ Convertir un número entero positivo a su representación binaria (como cadena d
 
 |        |    n | f(n)   |
 | ------ | ---: | ------ |
-| CB     |    0 | "0"    |
 | CB     |    1 | "1"    |
+| ...    |  ... | ...    |
 | CR n/2 |    6 | "110"  |
 | CR n   |   13 | "1101" |
 
 
 
-f(n) = f(n/2) + string(n % 2)
+"1101" = "110" + "1" *o lo que es igual* **aBinario(n / 2) + string(n % 2)**
 
 
 </div>
@@ -45,12 +45,16 @@ FUNCION aBinario(n)
 
     SI n < 2 ENTONCES
 
-        Devolver string(n)
+        Resultado = string(n)
+
+    SINO
+
+        Resultado = aBinario(n / 2) + string(n % 2)
 
     FIN SI
 
 
-    Devolver aBinario(n / 2) + string(n % 2)
+    Devolver Resultado
 
 
 FIN FUNCIÓN

@@ -1,7 +1,7 @@
 # validar palíndromo
 
 
-Determinar si una palabra o frase es un palíndromo (se lee igual de izquierda a derecha que de derecha a izquierda).
+Determinar si una palabra o frase es un palíndromo.
 
 
 <details>
@@ -12,15 +12,17 @@ Determinar si una palabra o frase es un palíndromo (se lee igual de izquierda a
 <div align=center>
 
 
-|             |  palabra | f(palabra)                               |
-| ----------- | -------: | ---------------------------------------- |
-| CB          | "" o "a" | verdadero                                |
-| CR interior |    "aba" | verdadero                                |
-| CR completa |  "radar" | verdadero (r == r y "ada" es palíndromo) |
+|          | palabra | f(palabra) |
+| -------- | ------: | ---------- |
+| CB       |      "" | V          |
+| CB       |     "d" | V          |
+| ...      |     ... | ...        |
+| CR resto |   "ada" | V          |
+| CR n     | "radar" | V          |
 
 
 
-f(palabra) = (pri == ult) AND f(interior)
+V = ('r' == 'r') AND V *o lo que es igual* **(p[0] == p[n-1]) AND esPalindromo(interior)**
 
 
 </div>
@@ -44,19 +46,24 @@ FUNCION esPalindromo(palabra)
 
     SI longitud(palabra) <= 1 ENTONCES
 
-        Devolver VERDADERO
+        Resultado = VERDADERO
+
+    SINO
+
+        SI palabra[0] != palabra[n-1] ENTONCES
+
+            Resultado = FALSO
+
+        SINO
+
+            Resultado = esPalindromo(palabra[1...n-2])
+
+        FIN SI
 
     FIN SI
 
 
-    SI palabra[0] != palabra[longitud(palabra) - 1] ENTONCES
-
-        Devolver FALSO
-
-    FIN SI
-
-
-    Devolver esPalindromo(palabra[1:longitud(palabra) - 1])
+    Devolver Resultado
 
 
 FIN FUNCIÓN

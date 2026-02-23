@@ -12,15 +12,16 @@ Eliminar todas las apariciones de una letra específica en una palabra o frase.
 <div align=center>
 
 
-|             |                  palabra | f(palabra, letra) |
-| ----------- | -----------------------: | ----------------- |
-| CB          |                       "" | ""                |
-| CR resto    | "casa" (si letra es 'a') | "cs"              |
-| CR completa |                  "acasa" | "cs"              |
+|          | palabra | f(palabra, 'a') |
+| -------- | ------: | --------------- |
+| CB       |      "" | ""              |
+| ...      |     ... | ...             |
+| CR resto |  "nana" | "nn"            |
+| CR n     | "anana" | "nn"            |
 
 
 
-f(palabra) = f(resto) if char == letra else char + f(resto)
+"nn" = f("nana") *o lo que es igual* **eliminarLetra(resto, letra)**
 
 
 </div>
@@ -44,20 +45,24 @@ FUNCION eliminarLetra(palabra, letra)
 
     SI palabra es vacía ENTONCES
 
-        Devolver ""
-
-    FIN SI
-
-
-    SI palabra[0] == letra ENTONCES
-
-       Devolver eliminarLetra(palabra[1:], letra)
+        Resultado = ""
 
     SINO
 
-       Devolver palabra[0] + eliminarLetra(palabra[1:], letra)
+        SI palabra[0] == letra ENTONCES
+
+           Resultado = eliminarLetra(palabra[1...n-1], letra)
+
+        SINO
+
+           Resultado = palabra[0] + eliminarLetra(palabra[1...n-1], letra)
+
+        FIN SI
 
     FIN SI
+
+
+    Devolver Resultado
 
 
 FIN FUNCIÓN
