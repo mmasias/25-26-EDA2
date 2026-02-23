@@ -1,11 +1,11 @@
 ## 2DO
 
-- Producto de pares hasta n
-- Contar las cifras de un número
-- Elevar n al cuadrado
-- En una palabra/frase, eliminar todas las apariciones de una letra
-- En una palabra/frase, reemplazar una letra por otra
-- Validar su una palabra es un palíndromo
-- En una lista, duplicar sus elementos ([1,2,3] convertirla en [1,1,2,2,3,3])
-- En una lista, sumar elementos en posiciones pares.
-- Conversor a binario
+- [Contar cifras de un número](docs/contarCifrasNumero.md)
+- [Convertir a binario](docs/convertirBinario.md)
+- [Duplicar elementos](docs/duplicarElementos.md)
+- [Eliminar apariciones de una letra](docs/eliminarAparicionesLetra.md)
+- [Elevar n al cuadrado](docs/nAlCuadrado.md)
+- [Palíndromo](docs/palindromo.md)
+- [Pares hasta N](docs/paresHastaN.md)
+- [Reemplazar letra por otra](docs/remplazarLetraPorOtra.md)
+- [Sumar elementos en posiciones pares](docs/sumarElementosPosicionesPares.md)
