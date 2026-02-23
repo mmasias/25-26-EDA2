@@ -16,11 +16,8 @@ Eliminar todas las apariciones de una letra específica en una palabra o frase.
 | --- | ------: | --------------- |
 | CB  |      "" | ""              |
 | ... |     ... | ...             |
-| CR  |     "a" | ""              |
-| CR  |    "na" | "n"             |
-| CR  |   "ana" | "n"             |
-| CR  |  "nana" | "nn"            |
-| CR  | "anana" | "nn"            |
+| CR n-1 |  "nana" | "nn"            |
+| CR n | "anana" | "nn"            |
 
 
 

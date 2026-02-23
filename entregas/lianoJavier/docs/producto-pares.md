@@ -16,7 +16,7 @@ Calcular el producto de todos los números pares positivos desde 2 hasta n.
 | ------ | ---: | ---- |
 | CB     |    2 | 2    |
 | ...    |  ... | ...  |
-| CR n-2 |    4 | 8    |
+| CR n-1 |    4 | 8    |
 | CR n   |    6 | 48   |
 
 

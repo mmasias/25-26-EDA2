@@ -16,7 +16,7 @@ Calcular el número de dígitos que tiene un número natural.
 | ------- | ---: | ---- |
 | CB      |    1 | 1    |
 | ...     |  ... | ...  |
-| CR n/10 |   12 | 2    |
+| CR n-1   |   12 | 2    |
 | CR n    |  123 | 3    |
 
 

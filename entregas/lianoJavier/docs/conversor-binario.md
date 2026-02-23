@@ -16,7 +16,7 @@ Convertir un número entero positivo a su representación binaria.
 | ------ | ---: | ------ |
 | CB     |    1 | "1"    |
 | ...    |  ... | ...    |
-| CR n/2 |    6 | "110"  |
+| CR n-1 |    6 | "110"  |
 | CR n   |   13 | "1101" |
 
 

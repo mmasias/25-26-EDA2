@@ -17,7 +17,7 @@ Determinar si una palabra o frase es un palíndromo.
 | CB       |      "" | V          |
 | CB       |     "d" | V          |
 | ...      |     ... | ...        |
-| CR resto |   "ada" | V          |
+| CR n-1 |   "ada" | V          |
 | CR n     | "radar" | V          |
 
 

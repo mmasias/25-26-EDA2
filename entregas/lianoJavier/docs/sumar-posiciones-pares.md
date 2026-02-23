@@ -16,7 +16,7 @@ Sumar los elementos de una lista que se encuentran en posiciones pares (segunda,
 | -------- | ------------: | --------------------------------- |
 | CB       |        [a, b] | b                                 |
 | ...      |           ... | ...                               |
-| CR resto |     [3,4,5,6] | 10 (2ª pos=4, 4ª pos=6)           |
+| CR n-1 |     [3,4,5,6] | 10 (2ª pos=4, 4ª pos=6)           |
 | CR n     | [1,2,3,4,5,6] | 12 (2ª pos=2, 4ª pos=4, 6ª pos=6) |
 
 

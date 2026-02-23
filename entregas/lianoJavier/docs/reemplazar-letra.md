@@ -12,11 +12,11 @@ Reemplazar todas las apariciones de una letra por otra en una palabra o frase.
 <div align=center>
 
 
-|          | palabra | f(p, 'a', 'e') |
+|          | palabra | f(palabra, 'a', 'e') |
 | -------- | ------: | -------------- |
 | CB       |      "" | ""             |
 | ...      |     ... | ...            |
-| CR resto |  "nana" | "nene"         |
+| CR n-1 |  "nana" | "nene"         |
 | CR n     | "anana" | "enene"        |
 
 
