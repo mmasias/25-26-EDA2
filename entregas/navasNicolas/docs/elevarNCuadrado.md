@@ -7,13 +7,16 @@ Elevar cualquier digito a su respectivo valor al cuadrado.
 
 <div align=center>
 
-||n|f(n)|
+|Caso|n|f(n)|
 |-|-:|-|
-CB|0|0
-CB|1|1
-CB|7|49
-...|  | 
-CR n|8|64 = f(n - 1) + f(2 * n - 1)
+Base (CB)|0|0
+||1|1
+||2|4
+||...|... 
+||...|... 
+||...|... 
+||7|49 
+Recursivo (CR)|8|64 (f(n - 1) + f(2 * n - 1))
 
 
 </div>

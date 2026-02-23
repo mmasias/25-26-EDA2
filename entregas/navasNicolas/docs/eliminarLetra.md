@@ -7,14 +7,14 @@ Eliminar todas las apariciones de una letra dada en una palabra o frase. La func
 
 <div align=center>
 
-||entrada (s)|f(s, c)|
-|-|-:|-|
-CB|""|""   # cadena vacía → devolver cadena vacía
-CB|"a" con c='a'|""   # eliminar la única letra
-CB|"b" con c='a'|"b"  # no hay coincidencia
-...|  | 
-CR primer símbolo coincide|"aX..." con c='a'|f("X...", 'a')  # se elimina el primer carácter
-CR primer símbolo no coincide|"bX..." con c='a'|"b" + f("X...", 'a')  # se conserva el primer carácter
+| Caso | entrada ($s$) | $f(s, c)$ |
+| :--- | :--- | :--- |
+| **CB** | "" | "" |
+| **CB** | $s$ (si $s = c$) | "" |
+| **CB** | $s$ (si $s \neq c$) | $s$ |
+| ... | | |
+| **CR** | $s$ (si $s[0] = c$) | $f(s_{resto}, c)$ |
+| **CR** | $s$ (si $s[0] \neq c$) | $s[0] + f(s_{resto}, c)$ |
 
 </div>
 

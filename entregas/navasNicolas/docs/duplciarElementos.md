@@ -7,10 +7,14 @@ Toma una lista de elementos y devuelve una nueva lista donde cada elemento origi
 
 <div align=center>
 
-||entrada (L)|f(L)|
+|Caso|Lista|f(L)|
 |-|-:|-|
-CB|[]|[]   # lista vacía → devolver lista vacía
-CR elemento a duplicar|[X, ...]|[X, X] + f([...])  # duplicar el primero y evaluar resto
+|Base (CB)|[ ]|[ ]
+||[ a ]|[ a, a ]
+||...|...
+||...|...
+||[ a, b, c, d, f, e ]|[a, a, b, b, c, c, d, d, f, f, e, e ]
+|Recursivo CR|[a, b, c, d, f, e, g]|[a, a, b, b, c, c, d, d, f, f, e, e, g, g] (f(L-1) + cola, cola)
 
 </div>
 

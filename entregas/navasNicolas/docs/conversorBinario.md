@@ -1,41 +1,47 @@
 # Conversor a binario
 
-Convierte un número entero positivo de base 10 a su representación binaria en formato de cadena de texto. La función recibe el número entero y devuelve un texto compuesto de ceros y unos.
+Convierte un número entero positivo de base 10 a su representación binaria (cadena). 
 
 <details>
-<summary>Ver análisis recursivo</summary>
+<summary>Ver análisis recursivo corregido</summary>
 
 <div align=center>
 
-||entrada (n)|f(n)|
-|-|-:|-|
-CB|0|"0"   # el binario de 0 es 0
-CB|1|"1"   # el binario de 1 es 1
-CR dividir y tomar módulo|n >= 2|f(n // 2) + texto(n mod 2)  # divide entre 2 y concatena el resto
+| Caso | n | f(n) |
+| :--- | :--- | :--- |
+| **Base (CB)** | 0 | "0" |
+|  | 1 | "1" |
+|  | 2 | "10" |
+|  | ... | ... |
+|  | ... | ... |
+|  | ... | ... |
+|  | 9 | "1001" |
+| **Recursivo (CR)** | 10 | "1010" (f(1)+f(n-1)) |
+
 
 </div>
 
 </details>
 
-## Pseudocódigo 
-
+## Pseudocódigo
 <details>
-<summary>Ver pseudocódigo</summary>
+<summary>ver pseudocódigo</summary>
 
 ```text
 FUNCION convertirABinario(n)
+    // Caso especial para el cero puro
+    SI n == 0 ENTONCES
+        DEVOLVER "0"
+    FIN SI
+    
+    // Caso base para detener la recursión
+    SI n == 1 ENTONCES
+        DEVOLVER "1"
+    FIN SI
 
-    SI n == 0 ENTONCES
-        Devolver "0"
-    FIN SI
-    
-    SI n == 1 ENTONCES
-        Devolver "1"
-    FIN SI
-
-    cociente <- división entera de n entre 2
-    residuo  <- n módulo 2
-
-    Devolver convertirABinario(cociente) + convertirATexto(residuo)
-
+    // Llamada recursiva: dividimos el problema a la mitad
+    // y pegamos el resto (0 o 1) al final de la cadena
+    DEVOLVER convertirABinario(n DIV 2) + convertirATexto(n MOD 2)
 FIN FUNCIÓN
+'''
+</details>

@@ -7,12 +7,13 @@ Verifica si una cadena de texto se lee igual de izquierda a derecha que de derec
 
 <div align=center>
 
-||entrada (s)|f(s)|
-|-|-:|-|
-CB|""|Verdadero   # cadena vacía es palíndromo
-CB|"a"|Verdadero   # un único carácter es palíndromo
-CR extremos iguales|"a...a"|f("...")   # quitar primer y último carácter y evaluar resto
-CR extremos distintos|"a...b"|Falso   # al no coincidir, se rompe el palíndromo
+| Caso | entrada ($s$) | $f(s)$ |
+| :--- | :--- | :--- |
+| **CB** | "" | Verdadero |
+| **CB** | $s$ (donde $s = 1$) | Verdadero |
+| | ... | ... |
+| **CR** | $s[0] = s[n]$ | Verdadero ($f(central(s)$) |
+| **CR** | $s[0] \neq s[n]$ | Falso |
 
 </div>
 

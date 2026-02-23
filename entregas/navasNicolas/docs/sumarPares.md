@@ -9,10 +9,11 @@ Calcula la suma de los elementos que se encuentran en los índices pares de una 
 
 ||entrada (L)|f(L)|
 |-|-:|-|
-CB|[]|0   # lista vacía suma 0
-CB|[X]|X   # lista de un elemento suma ese elemento
-CR tomar par y saltar impar|[X, Y, ...]|X + f([...])  # sumar X, descartar Y, y evaluar el resto
-
+CB|[]|0
+CB|[1]|1
+||...|...|
+CR |[1, 2, 3, 4, 5, 6]|6 (f(n-2)+(n-2))
+CR |[1, 2, 3, 4, 5, 6, 7]|12 (f(n-2)+(n-2))
 </div>
 
 </details>

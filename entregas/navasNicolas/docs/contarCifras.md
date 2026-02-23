@@ -7,16 +7,12 @@ Calcular el número de cifras (dígitos) que tiene un número entero en base 10.
 
 <div align=center>
 
-||n|f(n)|
-|-|-:|-|
-CB|0|1
-CB|1|1
-CB|7|1
-...|  | 
-CR n/10|15|2 = 1 + f(1)
-CR n|123|3 = 1 + f(12)
 
-3 = 1 + 2 *o lo que es igual* **1 + contarCifras(12)** *(cuando n tiene más de una cifra)*
+| Caso | n | f(n) |
+| :--- | :--- | :--- |
+| **Base (CB)** |  5 | 1 |
+|  |  15 | 2 |                
+| **Recursivo (CR)** | 315 | 3 ($1 + f(n -1)$) | 
 
 </div>
 
