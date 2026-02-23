@@ -51,7 +51,7 @@ FUNCION duplicarElementos(lista)
 
         Elemento = lista[0]
 
-        RestoDuplicado = duplicarElementos(lista[1...n-1])
+        RestoDuplicado = duplicarElementos(lista[1...longitud(lista)-1])
 
         Resultado = [Elemento, Elemento] + RestoDuplicado
 

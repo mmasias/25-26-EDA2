@@ -50,13 +50,13 @@ FUNCION esPalindromo(palabra)
 
     SINO
 
-        SI palabra[0] != palabra[n-1] ENTONCES
+        SI palabra[0] != palabra[longitud(palabra)-1] ENTONCES
 
             Resultado = FALSO
 
         SINO
 
-            Resultado = esPalindromo(palabra[1...n-2])
+            Resultado = esPalindromo(palabra[1...longitud(palabra)-2])
 
         FIN SI
 

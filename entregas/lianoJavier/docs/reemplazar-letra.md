@@ -51,11 +51,11 @@ FUNCION reemplazarLetra(palabra, vieja, nueva)
 
         SI palabra[0] == vieja ENTONCES
 
-           Resultado = nueva + reemplazarLetra(palabra[1...n-1], vieja, nueva)
+           Resultado = nueva + reemplazarLetra(palabra[1...longitud(palabra)-1], vieja, nueva)
 
         SINO
 
-           Resultado = palabra[0] + reemplazarLetra(palabra[1...n-1], vieja, nueva)
+           Resultado = palabra[0] + reemplazarLetra(palabra[1...longitud(palabra)-1], vieja, nueva)
 
         FIN SI
 

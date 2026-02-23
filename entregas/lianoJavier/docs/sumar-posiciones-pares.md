@@ -49,7 +49,7 @@ FUNCION sumarPares(lista)
 
     SINO
 
-        Resultado = lista[1] + sumarPares(lista[2...n-2])
+        Resultado = lista[1] + sumarPares(lista[2...longitud(lista)-2])
 
     FIN SI
 
