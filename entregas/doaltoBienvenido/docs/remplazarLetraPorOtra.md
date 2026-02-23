@@ -13,9 +13,9 @@ En una palabra/frase, reemplazar una letra por otra
 
 Patrón de recursividad:
 
-f(n) = cabeza(letra nueva) & f(n - 1) -> Siendo cabeza misma letra vieja
+Siendo cabeza misma letra vieja --> f(n) = cabeza(letra nueva) & f(n - 1) 
 
-f(n) = cabeza & f(n - 1)
+Siendo cabeza letra distinta --> f(n) = cabeza & f(n - 1)
 
 ---
 
