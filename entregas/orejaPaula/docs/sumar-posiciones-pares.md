@@ -2,7 +2,9 @@
 
 En una lista, sumar los elementos que se encuentran en posiciones pares (0, 2, 4, etc.).
 
-## Análisis recursivo
+<details>
+
+<summary>Ver análisis recursivo</summary>
 
 <div align=center>
 
@@ -25,7 +27,13 @@ Patrón de recursividad:
 
 </div>
 
+</details>
+
 ## Pseudocódigo
+
+<details>
+
+<summary>Ver pseudocódigo</summary>
 
 ```text
 FUNCION sumarPosicionesPares(lista)
