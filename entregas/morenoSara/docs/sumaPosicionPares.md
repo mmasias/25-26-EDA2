@@ -5,7 +5,7 @@
 
 <div align=center>
 
-||lista|f(lista)|
+||lista|f(n)|
 |-|-|-|
 CB|[]|0|
 ...|||
