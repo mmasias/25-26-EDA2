@@ -1,4 +1,4 @@
-### Factorial
+## Factorial
 
 Calcular el producto de todos los números enteros positivos desde 1 hasta n.  
 Por definición, **0! = 1**.
