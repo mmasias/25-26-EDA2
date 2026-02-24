@@ -2,41 +2,53 @@
 
 Calcular el producto de números pares hasta n
 
+## Análisis Recursivo
+
 <details>
-<summary>Ver análisis recursivo</summary>
+<summary>Ver análisis</summary>
 
 <div align=center>
 
 ||n|f(n)|
 |-|-:|-|
-CB|0|0
+CB|2|2
 ...
 ...
 ...
-CR n-1|10 x 12|120
-CR n|6 x 10 x 12|720
+n-1|6|48
+n|8|384
+...
+...
+n-1|10|3840
+n|12|46080
 
-Esto implica que: **f(n-1) * cabeza = 720**
+Esto implica que: **f(n-1) * n = f(n)** cuando son pares, cuando son impares se salta el número.
 
-Osea: **120 * 6 = 720**
+[Imágen de Análisis](/entregas/alvaradoCarlos/images/productoDePares.jpeg)
 
 </div>
 
 </details>
 
-## Pseudocódigo & código
+## Pseudocódigo
 
 <details>
 <summary>Ver pseudocódigo</summary>
 
 ```text
-FUNCION productosDePares(n)
+FUNCION multiplicarPares(n)
 
-    SI n es 0 ENTONCES
-        Devolver 0
+    SI n == 2 ENTONCES
+        Devolver 2
+    SI NO
+
+        SI n es par ENTONCES
+            Devolver n * multiplicarPares(n-2)
+        SI NO
+            Devolver multiplicarPares(n - 1)
+        FIN SI
+
     FIN SI
-
-    Devolver productosDePares(n - 1) * cabeza
 
 FIN FUNCIÓN
 ```
