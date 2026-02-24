@@ -1,37 +1,29 @@
-# Carpeta de entregas
+# Ejercicios Recursividad 
 
-Para cada entrega, cree en esta carpeta su carpeta personal usando el estándar `apellidoNombre`.
+Colección de ejercicios de recursividad documentados con análisis y pseudocódigo.
 
-## Estructura
+---
 
-```
-/entregas/apellidoNombre/README.md   <-- Presentación de la entrega
-                        /src         <-- Código fuente
-                        /modelosUML  <-- Modelos en plantUML
-                        /docs        <-- Documentación adicional
-                        /images      <-- Imágenes, diagramas...
-```
+## Lista de ejercicios
 
-## Artefactos habituales
+1. [Producto de pares hasta n](productoDePares.md)
+2. [Contar cifras de un número](contarCifras.md)
+3. [Elevar n al cuadrado](elevarN.md)
+4. [Eliminar letra en una palabra](eliminarLetra.md)
+5. [Reemplazar letra en una palabra](reemplazarLetra.md)
+6. [Validar palíndromo](palindromo.md)
+7. [Duplicar elementos de una lista](duplicarElementos.md)
+8. [Sumar posiciones pares de una lista](sumarElementos.md)
+9. [Conversor a binario](conversorBinario.md)
 
-||||
-|-|-|-|
-|1|**README.md**|Presentación de la entrega, con explicación de la solución y referencias al resto de artefactos. ¡Navegabilidad!|
-|2|**Código fuente**|Proyecto ordenado dentro de `/src`.|
-|3|**Diagramas**|Fuente en `/modelosUML`, exportado en `/images`, referenciado en los .md pertinentes.|
-|4|**Documentación adicional**|En `/docs`, en formato markdown (u otro formato, solo si se solicita explícitamente).|
+---
 
-> Cada reto indicará qué artefactos son obligatorios y cuáles opcionales.
+## Notas
 
-## Criterios de valoración
+- Todos los ejercicios están resueltos mediante **recursividad**.
+- Se incluye:
+  - Análisis recursivo
+  - Tabla de valores
+  - Relación de recurrencia
+  - Pseudocódigo
 
-- **Proceso de creación** — commits bien descritos, un cambio por commit.
-- **Código limpio** — innegociable.
-- **Adecuado reparto de responsabilidades** entre módulos.
-- **Aplicación de lo visto en la vida, en el grado, en la asignatura y en las clases**, en ese orden.
-
-## Tenga en cuenta
-
-- **Planificar** antes de codificar (diagramas, esquemas, pseudocódigo).
-- **Construir código que se autoexplique**.
-- **Usar los commits** para documentar el proceso.
