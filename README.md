@@ -6,9 +6,3 @@ Rama de entregas de retos y ejercicios de la asignatura **Estructura de datos y 
 
 - Lea lo indicado en el [README de la carpeta de entregas](entregas/README.md).
 - Para la entrega de cada reto planteado cree una rama a partir de esta rama, siguiendo las instrucciones indicadas en dicho ejercicio, trabajo o reto.
-
-### [Recursividad](entregas/recursividad-2think/README.md).
-### [Código](entregas/recursividad-2think/cuestaAlejandra/src/Recursividad2Think.java).
-### [UML](entregas/recursividad-2think/cuestaAlejandra/modelosUML/diagrama-clases.puml).
-### [Diagrama](entregas/recursividad-2think/cuestaAlejandra/images/diagrama-clases.png).
-### [Explicación Recursividad](entregas/recursividad-2think/cuestaAlejandra/docs/explicacion-recursividad.md).
