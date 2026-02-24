@@ -21,7 +21,8 @@ En "elefante":
 Patrón de recursividad:
 
 - Si la palabra está vacía → **f(n) = ""**
-- Si la Cabeza **es** la letra a eliminar → **f(n) = f(n-1)** - Si la Cabeza **no es** la letra → **f(n) = Cabeza + f(n-1)**
+- Si la Cabeza **es** la letra a eliminar → **f(n) = f(n-1)** 
+- Si la Cabeza **no es** la letra → **f(n) = Cabeza + f(n-1)**
 
 </div>
 

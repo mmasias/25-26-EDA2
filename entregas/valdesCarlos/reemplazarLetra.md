@@ -21,7 +21,8 @@ En "pata" (cambiar 'a' por 'o'):
 Patrón de recursividad:
 
 - Si la palabra está vacía → **f(n) = ""**
-- Si la Cabeza **es** la letra vieja → **f(n) = letraNueva + f(n-1)** - Si la Cabeza **no es** la letra vieja → **f(n) = Cabeza + f(n-1)**
+- Si la Cabeza **es** la letra vieja → **f(n) = letraNueva + f(n-1)** 
+- Si la Cabeza **no es** la letra vieja → **f(n) = Cabeza + f(n-1)**
 
 </div>
 
