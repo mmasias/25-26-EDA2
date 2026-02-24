@@ -5,7 +5,7 @@
 
 <div align=center>
 
-||cadena|f(cadena)|
+||cadena|f(n)|
 |-|-|-|
 CB|""|TRUE|
 CB|"a"|TRUE|
