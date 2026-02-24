@@ -8,7 +8,7 @@ Calcular el producto de todos los números pares desde 2 hasta un número dado `
 
 | Tipo    | n | f(n) |
 |---------|---|------|
-| CB      | 1 | 1    |
+| CB      | <2| 1    |
 | ...     |...|...   |
 | CR n-1  | 4 | 8    |
 | CR n    | 6 | 48   |
