@@ -12,12 +12,14 @@ Ejemplo: reemplazar 'a' por 'o' en "casa"
 |        | cadena | f(cadena) |
 | ------ | ------ | --------- |
 | CB     | ""     | ""        |
-| ...    |  ...   | ...       |
-| CR     | "sa"   | "so"      |
-| CR     | "casa" | "coso"    |
+| ...    | ...    | ...       |
+| CR n-1 | "asa"  | "oso"     |
+| CR n   | "casa" | "coso"    |
+
+"coso" = "c" + "oso"
 
 Si la primera letra es igual a la letra a reemplazar ⇒  
-resultado = nuevaLetra + reemplazar(resto)
+resultado = letraNueva + reemplazar(resto)
 
 Si la primera letra es distinta ⇒  
 resultado = primeraLetra + reemplazar(resto)
@@ -50,6 +52,3 @@ FUNCION reemplazarLetra(cadena, letraOriginal, letraNueva)
     DEVOLVER Resultado
 
 FIN FUNCION
-```
-
-</details>
