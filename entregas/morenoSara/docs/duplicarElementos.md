@@ -28,7 +28,7 @@ cabeza(n) & cabeza(n) & f(n-1)
 ```text
 FUNCION duplicarElementos(n)
 
-    SI n es 0 ENTONCES
+    SI n == 0 ENTONCES
         Devolver "0"
     FIN SI
 
