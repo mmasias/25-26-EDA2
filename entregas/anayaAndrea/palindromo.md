@@ -6,12 +6,14 @@ Ejemplo: "radar"
 
 ## Análisis recursivo
 
+Ejemplo: "reconocer"
+
 | Caso | texto | f(texto) |
 |------|--------|-----------|
 | CB | "" | verdadero |
 | ... | ... | ... |
-| CR n-1 | "ada" | verdadero |
-| CR n | "radar" | verdadero |
+| CR n-1 | "econoce" | verdadero |
+| CR n | "reconocer" | verdadero |
 
 Patrón:
 
