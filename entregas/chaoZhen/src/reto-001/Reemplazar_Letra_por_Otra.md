@@ -1,39 +1,38 @@
 ### 5. En una palabra/frase, reemplazar una letra por otra
 
-Dada una cadena `s`, reemplazar todas las apariciones de la letra `c1` por `c2`.
 
 <details open>
 <summary>Ver análisis recursivo</summary>
 
 Asumiendo que queremos reemplazar "a" por "o" en "casa":
 
-| | n | f(n) |
+| | n | f(n,"a","o") |
 | :--- | :---: | :---: |
 | CB | "" | "" |
 | ... | | |
-| CR n-1 | "asa" | "oso" = "o" + "so" |
-| CR n | "casa" | "coso" = "c" + "oso" |
+| CR n-1 | "asa" | "oso" |
+| CR n | "casa" | "coso" |
 
 <br>
-<center>"coso" = "c" + f(n-1)
+<center>"coso" = "cabeza" + f(n-1)
 </details>
 
-### Pseudocódigo & código
+### Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
 
 ```text
-FUNCION reemplazarLetra(n, c1, c2)
+FUNCION reemplazarLetra(resto, letraVieja, letraNueva)
 
-    SI longitud(s) es 0 ENTONCES
+    SI es vacía ENTONCES
         Devolver ""
     FIN SI
     
-    SI s[0] es igual a c1 ENTONCES
-        Devolver c2 + reemplazarLetra(restoDeCadena(n), c1, c2)
+    SI cabeza es igual a letraVieja ENTONCES
+        Devolver letraNueva + reemplazarLetra(resto, letraVieja, letraNueva)
     SINO
-        Devolver s[0] + reemplazarLetra(restoDeCadena(n), c1, c2)
+        Devolver cabeza + reemplazarLetra(resto, letraVieja, letraNueva)
     FIN SI
     
 FIN FUNCIÓN
