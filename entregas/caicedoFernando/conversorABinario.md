@@ -14,8 +14,8 @@ Convertir un número decimal entero positivo a su representación en binario com
 13 en binario es "1101"
 6 en binario es "110"
 "1101" = "110" + "1"
-→ **f(n) = f(n / 2) + (n % 2)**
-(donde *n / 2* es la mitad del número y *n % 2* es el bit actual)
+→ **f(n) = f(n / 2) + (n MOD 2)**
+(donde *n/2* es la mitad del número que genera los bits previos, y *n MOD 2* es el bit actual)
 
 </div>
 

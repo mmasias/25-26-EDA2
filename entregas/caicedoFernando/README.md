@@ -1,3 +1,10 @@
 # Resolución batería de problemas
 1. [Productos Pares](ProductosPares.md)
 2. [Contar las cifras de un número](CifrasNumero.md)
+3. [Elevar n al cuadrado](nCuadrado.md)
+4. [En una palabra/frase, eliminar todas las apariciones de una letra](EliminarLetra.md)
+5. [En una palabra/frase, reemplazar una letra por otra](ReemplazarLetra.md)
+6. [Validar su una palabra es un palíndromo](ValidarPalabra.md)
+7. [En una lista, duplicar sus elementos ([1,2,3] convertirla en [1,1,2,2,3,3])](DuplicarElementos.md)
+8. [En una lista, sumar elementos en posiciones pares.](SumarPosicionesPares.md)
+9. [Conversor a binario](ConversorABinario.md)
