@@ -17,8 +17,6 @@ Sumar los elementos que se encuentran en las posiciones pares de una lista
 | 20           | verdadero  | Saltar (i → falso)                         | f(n-1)         | f(n-1)             |
 | 30           | falso      | Sumar (i → verdadero)                      | f(n-1) + 30    | 30 + f(n-1)        |
 
-**Tu razonamiento:**
-
 - **n** = Elemento actual (Cabeza).  
 - **i** = Interruptor de posición (flag booleano).  
 - **f(n-1)** = Suma del resto de la lista.  

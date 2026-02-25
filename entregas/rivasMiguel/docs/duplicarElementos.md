@@ -16,8 +16,6 @@ Duplicar cada elemento de una lista (ej. de `[1, 2, 3]` a `[1, 1, 2, 2, 3, 3]`) 
 | n     | [2, 3]       | 2          | [2, 2]        | f([3])         | [2, 2, 3, 3]             |
 | n+1   | [1, 2, 3]    | 1          | [1, 1]        | f([2, 3])      | [1, 1, 2, 2, 3, 3]       |
 
-**Tu razonamiento:**
-
 - **C** = Cabeza (primer elemento de la lista).  
 - **2C** = La cabeza repetida dos veces.  
 - **f(n-1)** = Resultado de procesar el resto de la lista (Cola).  

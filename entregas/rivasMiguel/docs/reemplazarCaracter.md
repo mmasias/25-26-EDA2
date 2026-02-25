@@ -16,8 +16,6 @@ Sustituir todas las apariciones de un carácter específico ($R$) por uno nuevo 
 | n     | "ba"     | 'b'        | f("a")         | "bx"                   |
 | n+1   | "aba"    | 'a'        | f("ba")        | "xbx"                  |
 
-**Tu razonamiento:**
-
 - **R** = Carácter a reemplazar  
 - **C** = Carácter actual (Cabeza)  
 - **N** = Carácter reemplazador  

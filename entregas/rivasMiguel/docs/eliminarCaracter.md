@@ -16,8 +16,6 @@ Eliminar todas las apariciones de un carácter específico (R) en una cadena de 
 | n     | "ba"     | 'b'        | f("a")         | "b"  |
 | n+1   | "aba"    | 'a'        | f("ba")        | "b"  |
 
-**Tu razonamiento:**
-
 - **R** = Carácter a remover  
 - **C** = Carácter actual (Cabeza)  
 

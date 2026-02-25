@@ -16,8 +16,6 @@ Determinar si una palabra o frase se lee igual de izquierda a derecha que de der
 | n     | "radar"      | 'r'    | 'r'  | f("ada")          | Verdadero |
 | n+1   | "java"       | 'j'    | 'a'  | —                 | Falso     |
 
-**Tu razonamiento:**
-
 - **Cabeza** = Primer carácter de la cadena.  
 - **Cola** = Último carácter de la cadena.  
 - **f(n-1)** = El resto de la palabra tras quitar cabeza y cola.  
