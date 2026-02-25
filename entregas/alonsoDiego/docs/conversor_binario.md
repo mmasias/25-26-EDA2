@@ -1,20 +1,20 @@
 # Conversor a binario
 
-Convertir un número entero decimal positivo a su formato binario.
+Convertir un número entero decimal positivo a su representación en formato binario.
 
 ## Análisis recursivo
-(Ejemplo convirtiendo el número 5)
+(Ejemplo convirtiendo el número 13)
 
 <div align=center>
 
-| Tipo    |   n | f(n) |
-|---------|----:|-----:|
-| CB      |   1 |  "1" |
-| ...     | ... |  ... |
-| CR n-1  |   2 | "10" |
-| CR n    |   5 |"101" |
+| Tipo    |   n |   f(n) |
+|---------|----:|-------:|
+| CB      |   1 |    "1" |
+| ...     | ... |    ... |
+| CR n-1  |   6 |  "110" |
+| CR n    |  13 | "1101" |
 
-"101" = "10" + "1" → f(n / 2) + (n % 2)
+"1101" = "110" + "1" → f(n / 2) + (n % 2)
 
 </div>
 
