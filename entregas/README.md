@@ -6,7 +6,7 @@ Colección de ejercicios de recursividad documentados con análisis y pseudocód
 
 ## Lista de ejercicios
 
-1. [Producto de pares hasta n](anayaAndrea/docs/productoDePares.md)
+1. [Producto de pares hasta n](entregas/anayaAndrea/docs/productoDePares.md)
 2. [Contar cifras de un número](docs/contarCifras.md)
 3. [Elevar n al cuadrado](docs/elevarN.md)
 4. [Eliminar letra en una
@@ -15,7 +15,7 @@ Colección de ejercicios de recursividad documentados con análisis y pseudocód
 6. [Validar palíndromo](docs/palindromo.md)
 7. [Duplicar elementos de una lista](docs/duplicarElementos.md)
 8. [Sumar posiciones pares de una lista](docs/sumarElementos.md)
-9. [Conversor a binario](conversorBinario.md)
+9. [Conversor a binario](docs/conversorBinario.md)
 
 ---
 
