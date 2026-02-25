@@ -2,6 +2,11 @@
 
 > *Entiéndase "deberíamos saber" como una combinación de "nos debería sonar", "no nos debería sorprender", "deberíamos conocer", "deberíamos saber manejar", en función del tema abordado. En cualquier caso, lo mínimo es "no nos debería sorprender" y deberíamos poder tener una mínima conversación o lectura sobre estos temas.*
 
+## 25 febrero
+
+- Topología de una función recursiva y comportamiento de la misma en función a la disposición de los elementos que la conforman.
+- Consecuencias visibles / no visibles y de recursos en función a la topología.
+
 ## 23 febrero
 
 - Identificar y ser capaces de llamar formalmente a los elementos que conforman un caso de recursividad.
