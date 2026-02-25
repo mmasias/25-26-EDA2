@@ -1,0 +1,40 @@
+# VALIDAR SI UNA PALABRA ES PALÍNDROMO
+
+<details>
+<summary>Ver análisis recursivo</summary>
+
+<div align=center>
+
+|Caso|cadena|f(cadena)|
+|---|---|---|
+|CB|""|TRUE|
+|CB|"a"|TRUE|
+|...|...|...|
+|n-1|"caac"|TRUE|
+|n|"dcaacd"|TRUE|
+
+Si primero ≠ último → FALSE  
+Si no → comprobar interior (sin extremos)
+
+</div>
+
+</details>
+
+## Pseudocódigo
+
+```text
+FUNCION esPalindromo(cadena)
+
+    SI longitud(cadena) <= 1 ENTONCES
+        DEVOLVER VERDADERO
+    FIN SI
+
+    SI primerCaracter(cadena) != ultimoCaracter(cadena) ENTONCES
+        DEVOLVER FALSO
+    FIN SI
+
+    interior = subcadena sin primer y último carácter
+    DEVOLVER esPalindromo(interior)
+
+FIN FUNCION
+```
