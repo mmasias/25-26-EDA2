@@ -12,8 +12,8 @@ A continuación, puedes acceder a cada ejercicio haciendo clic en los enlaces:
 | 4 | **Eliminar letra en cadena** | [Ver aquí](docs/04EliminarLetra.md) |
 | 5 | **Reemplazar letra en cadena** | [Ver aquí](docs/05ReemplazarLetra.md) |
 | 6 | **Validar Palíndromo** | [Ver aquí](docs/06Palindromo.md) |
-| 7 | **Duplicar elementos de lista** | [Ver aquí](docs/07-DuplicarLista.md) |
-| 8 | **Sumar posiciones pares** | [Ver aquí](docs/08SumarPares.md) |
+| 7 | **Duplicar elementos de lista** | [Ver aquí](docs/07DuplicarLista.md) |
+| 8 | **Sumar posiciones pares** | [Ver aquí](docs/08SumaPares.md) |
 | 9 | **Conversor a binario** | [Ver aquí](docs/09DecimalBinario.md) |
 
 ---
