@@ -1,4 +1,4 @@
-# Duplicar los elementos de una lista
+## Duplicar los elementos de una lista
 
 Dada una lista, generar una nueva lista en la que cada valor aparezca repetido dos veces de manera consecutiva.
 

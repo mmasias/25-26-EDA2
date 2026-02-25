@@ -1,4 +1,4 @@
-## **Contar las cifras de un número**
+## Contar las cifras de un número
 
 <details>
 <summary>Ver análisis recursivo</summary>
