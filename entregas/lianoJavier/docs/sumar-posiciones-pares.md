@@ -16,12 +16,14 @@ Sumar los elementos de una lista que se encuentran en posiciones pares (segunda,
 | -------- | ------------: | --------------------------------- |
 | CB       |        [a, b] | b                                 |
 | ...      |           ... | ...                               |
-| CR n-1 |     [3,4,5,6] | 10 (2ª pos=4, 4ª pos=6)           |
-| CR n     | [1,2,3,4,5,6] | 12 (2ª pos=2, 4ª pos=4, 6ª pos=6) |
+| CR n-1 |     [3,4,5,6] | 8           |
+| CR n     | [1,2,3,4,5,6] | 9 |
 
 
 
-12 = 2 + 10 *o lo que es igual* **lista[n] + sumarPares(n-2)** (Siendo n par; en caso contrario se resta 1 antes de empezar a n. Siendo n el tamaño de la lista partiendo de 0.)
+Leemos la posición en el indice 0 y se la sumamos a f(n-1).
+
+n-1 es n quitandole dos veces la cabeza.
 
 
 </div>
@@ -43,13 +45,13 @@ Sumar los elementos de una lista que se encuentran en posiciones pares (segunda,
 FUNCION sumarPares(lista)
 
 
-    SI longitud(lista) < 2 ENTONCES
+    SI longitud(lista) < 1 ENTONCES
 
-        Resultado = 0
+        Resultado = lista[0];
 
     SINO
 
-        Resultado = lista[1] + sumarPares(lista[2...longitud(lista)-2])
+        Resultado = lista[0] + sumarPares(lista[2...longitud(lista)])
 
     FIN SI
 
