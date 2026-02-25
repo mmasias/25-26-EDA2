@@ -9,7 +9,7 @@
 |-|-|-|
 CB|""|TRUE|
 CB|"a"|TRUE|
-CB|"aa"|TRUE|
+
 ...|||
 n-1|"caac"|TRUE|
 n|"dcaacd"|TRUE|
