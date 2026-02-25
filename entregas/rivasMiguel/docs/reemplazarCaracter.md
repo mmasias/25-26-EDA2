@@ -23,8 +23,8 @@ Sustituir todas las apariciones de un carácter específico ($R$) por uno nuevo 
 - **N** = Carácter reemplazador  
 - **f(n-1)** = Resultado de procesar el resto de la palabra (Cola)  
 
-Si (C = R) \Rightarrow N + f(n-1)\
-Si (C \ne R) \Rightarrow C + f(n-1)
+Si (C = R) -> N + f(n-1)\
+Si (C != R) -> C + f(n-1)
 
 </div>
 
