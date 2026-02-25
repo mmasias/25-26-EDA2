@@ -1,24 +1,30 @@
+
+---
+
+## contar_cifras.md
+
+```markdown
 # contarCifrasNumero
 
-Ver cuantas cifras tiene un numero entero.
+Ver cuántas cifras tiene un número entero positivo.
 
 ## Análisis recursivo
 
 <div align=center>
 
-| Tipo    | n   | f(n) |
-|---------|----:|------:|
-| CB      | 9   |    1 |
-| ...     | ... |  ... |
-| CR n-1  | 972 |   3  |
-| CR n    | 9721|    4 |
+| Tipo    | n    | f(n) |
+|---------|-----:|-----:|
+| CB      | 9    | 1    |
+| ...     | ...  | ...  |
+| CR n-1  | 972  | 3    |
+| CR n    | 9721 | 4    |
 
-9721 tiene 4 cifras y 972 tiene 2 cifras 
- 
+9721 tiene 4 cifras  
+972 tiene 3 cifras  
 
-4 = 1 + 3 
+4 = 1 + 3  
 → **f(n) = 1 + f(n-1)**  
-En otras palabras la n-1 es n pero sin la ultima cifra
+(donde *n-1* es el número sin su última cifra)
 
 </div>
 
@@ -33,6 +39,6 @@ FUNCION contarCifras(n)
         Resultado = 1 + contarCifras(n / 10)
     FIN SI
 
-    Devolve Resultado
+    Devolver Resultado
 
 FIN FUNCIÓN

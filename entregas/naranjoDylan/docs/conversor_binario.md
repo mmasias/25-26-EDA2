@@ -1,3 +1,9 @@
+
+---
+
+## conversor_binario.md
+
+```markdown
 # Binario
 
 Calcular la representación binaria de un número entero positivo.
@@ -6,26 +12,19 @@ Calcular la representación binaria de un número entero positivo.
 
 <div align=center>
 
-Aquí lo tienes con el formato exacto, listo para copiar y pegar en tu archivo .md:
+| Tipo    | n  | f(n)   |
+|---------|---:|--------|
+| CB      | 1  | "1"    |
+| ...     | .. | ...    |
+| CR n-1  | 6  | "110"  |
+| CR n    | 13 | "1101" |
 
-Markdown
-# Binario
-Calcular la representación binaria de un número entero positivo.
-## Análisis recursivo
-<div align=center>
-| Tipo    | n  | f(n)     |
-|---------|---:|----------|
-| CB      | 1  | "1"      |
-| ...     | .. | ...      |
-| CR n-1  | 6  | "110"    |
-| CR n    | 13 | "1101"   |
+6 en binario es "110"  
+13 en binario es "1101"
 
-
-6 en binario es 110 
-13 en binario es 1101
-1101 = 110 y 1
-→ **f(n) = f(n-1) y último bit**  
-
+"1101" = "110" CONCAT "1"  
+→ **f(n) = f(n-1) & último bit**  
+(donde *n-1* es el cociente de dividir entre 2)
 
 </div>
 

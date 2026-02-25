@@ -1,3 +1,9 @@
+
+---
+
+## validar_palindromo.md
+
+```markdown
 # Validar palíndromo
 
 Determinar si una palabra es un palíndromo.
@@ -5,6 +11,7 @@ Determinar si una palabra es un palíndromo.
 ## Análisis recursivo
 
 <div align=center>
+
 | Tipo    | palabra  | f(n)  |
 |---------|----------|-------|
 | CB      | ""       | TRUE  |
@@ -13,7 +20,8 @@ Determinar si una palabra es un palíndromo.
 | CR n    | "rallar" | TRUE  |
 
 Patrón de recursividad:  
-**f(n) = (cabeza == cola) AND f(n - 1)**
+**f(n) = (cabeza == cola) AND f(n-1)**  
+(donde *n-1* es la palabra sin la primera y la última letra)
 
 </div>
 

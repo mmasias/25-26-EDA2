@@ -1,20 +1,26 @@
+
+---
+
+## duplicar_elemento.md
+
+```markdown
 # duplicarElementos
 
-duplicar los elementos de una lista (ej: [1,2,3] → [1,1,2,2,3,3]).
+Duplicar los elementos de una lista (ej: [1,2,3] → [1,1,2,2,3,3]).
 
 ## Análisis recursivo
 
 <div align=center>
-| Tipo    | lista     | f(n)              |
-|---------|-----------|-------------------|
-| CB      | []        | []                |
-| ...     | ...       | ...               |
-| CR n-1  | [4,8]     | [4,4,8,8]         |
-| CR n    | [1,4,8]   | [1,1,4,4,8,8]     |
+
+| Tipo    | lista     | f(n)            |
+|---------|-----------|-----------------|
+| CB      | []        | []              |
+| ...     | ...       | ...             |
+| CR n-1  | [4,8]     | [4,4,8,8]       |
+| CR n    | [1,4,8]   | [1,1,4,4,8,8]   |
 
 [1,1,4,4,8,8] = [1,1] + [4,4,8,8]  
-
-**2 veces la Cabeza + f(n-1)**
+→ **2 veces la Cabeza + f(n-1)**
 
 </div>
 
