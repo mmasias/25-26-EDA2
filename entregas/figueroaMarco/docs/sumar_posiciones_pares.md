@@ -31,4 +31,9 @@ FUNCTION sumarPosicionesPares(list)
 
     ELSE
         head = list[0]
-        missing
+        missingSince2 = list[2..length(list)-1]
+    END IF 
+
+    Return Result
+
+    END FUNCTION
