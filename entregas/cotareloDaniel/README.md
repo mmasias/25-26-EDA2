@@ -1,3 +1,3 @@
 # Documentos de referencia
 
-- [CriptoAritmo](/entregas/cotareloDaniel/src/CriptoAritmo.md)
+- [CriptoAritmo](/entregas/cotareloDaniel/src/CriptoAritmo.java)
