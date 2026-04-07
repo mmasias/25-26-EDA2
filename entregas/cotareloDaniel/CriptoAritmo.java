@@ -1,28 +1,28 @@
 public class CriptoAritmo {
 
-    static String[] sumandos;
-    static String resultado;
-    static char[] letras;
-    static int[] valores;
-    static boolean[] usados;
+    private static String[] sumandos;
+    private static String resultado;
+    private static char[] letras;
+    private static int[] valores;
+    private static boolean[] usados;
 
     public static void main(String[] args) {
 
-        sumandos = new String[]{"SEND", "MORE"};
+        sumandos = new String[] { "SEND", "MORE" };
         resultado = "MONEY";
         preparar();
         resolver(0);
 
         System.out.println();
 
-        sumandos = new String[]{"FORTY", "TEN", "TEN"};
+        sumandos = new String[] { "FORTY", "TEN", "TEN" };
         resultado = "SIXTY";
         preparar();
         resolver(0);
 
         System.out.println();
 
-        sumandos = new String[]{"ODD", "ODD"};
+        sumandos = new String[] { "ODD", "ODD" };
         resultado = "EVEN";
         preparar();
         resolver(0);
