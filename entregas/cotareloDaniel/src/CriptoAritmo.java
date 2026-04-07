@@ -1,3 +1,4 @@
+package src;
 public class CriptoAritmo {
 
     private static String[] sumandos;
