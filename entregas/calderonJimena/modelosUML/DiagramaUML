@@ -1,0 +1,25 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+class CriptoSolver {
+    - letters: char[]
+    - values: int[]
+    - used: boolean[]
+    - addends: String[]
+    - result: String
+    - mapping: Map<Character, Integer>
+    - firstLetters: Set<Character>
+    
+    + solve(addends: String[], result: String): Map<Character, Integer>
+    + printSolution(sol: Map<Character, Integer>): void
+    + main(args: String[]): void
+    
+    - backtrack(index: int): boolean
+    - canPrune(): boolean
+    - isValid(): boolean
+    - toValue(word: String): long
+}
+
+@enduml
