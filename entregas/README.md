@@ -1,4 +1,4 @@
-# Documento de Diseño - Reto - 002
+# Documento de Diseño - Reto 002
 
 ## 1. Contexto y Estrategia
 El objetivo es resolver acertijos de criptoaritmética mediante un algoritmo recursivo de **Backtracking**. 
@@ -36,3 +36,8 @@ acumulador = 0
 Para cada letra en la palabra:
     acumulador = (acumulador * 10) + mapaDeAsignaciones[letra]
 Retornar acumulador
+```
+
+## 4. Código fuente
+
+* [`src/SolucionadorCriptoUniversal.java`](./src/SolucionadorCriptoUniversal.java) 
