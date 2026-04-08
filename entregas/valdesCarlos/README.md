@@ -1,5 +1,5 @@
 # Explicación planteamiento ejercicio recursvidad
-## Carlos Valdes, Marcos González (@marcosgonzalezhidalgo), Diego Alonso (@diego-alonsodiaz), Sergio Puente (@sergioopuente)
+## Carlos Valdes, Marcos González ([marcosgonzalezhidalgo](https://github.com/marcosgonzalezhidalgo)), Diego Alonso ([diego-alonsodiaz](https://github.com/diego-alonsodiaz)), Sergio Puente ([sergioopuente](https://github.com/sergioopuente))
 
 ## Topología sendMoreMoney
 
