@@ -38,14 +38,14 @@ public class criptaritmetica {
 
         for (int digito = 0; digito <= 9; digito++) {
             if (puedeAsignar(nivel, digito)) {
-                asignacion[nivel]   = digito;   // HACER
+                asignacion[nivel]   = digito;   
                 digitoUsado[digito] = true;
 
                 if (resolver(nivel + 1)) {
                     return true;
                 }
 
-                asignacion[nivel]   = -1;        // DESHACER
+                asignacion[nivel]   = -1;       
                 digitoUsado[digito] = false;
             }
         }
