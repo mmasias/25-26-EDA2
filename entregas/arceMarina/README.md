@@ -8,9 +8,7 @@ Este proyecto resuelve acertijos matemáticos donde las letras representan dígi
 
 El código aborda el problema en tres etapas conceptuales:
 
----
-
-## 1. Preparación y Extracción
+### 1. Preparación y Extracción
 
 Antes de calcular, el programa necesita conocer el "alfabeto" del acertijo.
 
@@ -20,13 +18,12 @@ Antes de calcular, el programa necesita conocer el "alfabeto" del acertijo.
 - **Mapeo:**  
   Se crean estructuras para asociar cada letra encontrada con un valor numérico y un registro de qué números (0-9) ya están ocupados.
 
----
 
-## 2. Exploración Mediante Backtracking
+### 2. Exploración Mediante Backtracking
 
 La resolución se realiza mediante el método `resolver(int posicion)`, que funciona como un proceso de decisión recursivo.
 
-### 🔹 Caso Base
+#### 🔹 Caso Base
 
 Es el punto de parada de la recursión.
 
