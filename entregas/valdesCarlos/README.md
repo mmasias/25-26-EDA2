@@ -1,5 +1,5 @@
 # Explicación planteamiento ejercicio recursvidad
-# Carlos Valdes, Marcos González (@marcosgonzalezhidalgo), Diego Alonso (@diego-alonsodiaz), Sergio Puente (@sergioopuente)
+## Carlos Valdes, Marcos González (@marcosgonzalezhidalgo), Diego Alonso (@diego-alonsodiaz), Sergio Puente (@sergioopuente)
 
 ## Topología sendMoreMoney
 
@@ -9,6 +9,7 @@ if (indice == LETRAS.length) {
             return esSumaCorrecta(asignacion);
         }
 ```
+[Link al codigo](https://github.com/carlosvaldesbarquin/25-26-EDA2/blob/dfb81c5e1c7cc56424bc0d9be788be05222d772b/entregas/valdesCarlos/src/sendMoreMoney.java#L24-L26)
 <div align=center>
 
 | | n (Letra actual) | Ficha asignada | Estado de la Pizarra | f(n) |
@@ -45,3 +46,4 @@ if (buscarSolucion(indice + 1, asignacion, usados)) {
     return true; 
 }
 ```
+[Link al codigo](https://github.com/carlosvaldesbarquin/25-26-EDA2/blob/dfb81c5e1c7cc56424bc0d9be788be05222d772b/entregas/valdesCarlos/src/sendMoreMoney.java#L43-L45)
