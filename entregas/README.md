@@ -1,37 +1,82 @@
-# Carpeta de entregas
+# SEND + MORE = MONEY
 
-Para cada entrega, cree en esta carpeta su carpeta personal usando el estándar `apellidoNombre`.
+Solución al clásico criptograma aritmético mediante dos enfoques: **algoritmo recursivo** con backtracking y **algoritmo iterativo** con simulación de pila.
 
-## Estructura
+---
+
+## ¿En qué consiste el problema?
+
+El problema es una suma donde cada letra representa un dígito del 0 al 9:
 
 ```
-/entregas/apellidoNombre/README.md   <-- Presentación de la entrega
-                        /src         <-- Código fuente
-                        /modelosUML  <-- Modelos en plantUML
-                        /docs        <-- Documentación adicional
-                        /images      <-- Imágenes, diagramas...
+  S E N D
++ M O R E
+---------
+M O N E Y
 ```
 
-## Artefactos habituales
+Las reglas son:
+- Cada letra representa un dígito distinto
+- Dos letras distintas no pueden tener el mismo dígito
+- `S` y `M` no pueden ser 0, ya que son la primera cifra de un número
 
-||||
-|-|-|-|
-|1|**README.md**|Presentación de la entrega, con explicación de la solución y referencias al resto de artefactos. ¡Navegabilidad!|
-|2|**Código fuente**|Proyecto ordenado dentro de `/src`.|
-|3|**Diagramas**|Fuente en `/modelosUML`, exportado en `/images`, referenciado en los .md pertinentes.|
-|4|**Documentación adicional**|En `/docs`, en formato markdown (u otro formato, solo si se solicita explícitamente).|
+La única solución válida es:
 
-> Cada reto indicará qué artefactos son obligatorios y cuáles opcionales.
+```
+    09567
+  + 01085
+  -------
+    10652
+```
 
-## Criterios de valoración
+Es decir: S=9, E=5, N=6, D=7, M=1, O=0, R=8, Y=2.
 
-- **Proceso de creación** — commits bien descritos, un cambio por commit.
-- **Código limpio** — innegociable.
-- **Adecuado reparto de responsabilidades** entre módulos.
-- **Aplicación de lo visto en la vida, en el grado, en la asignatura y en las clases**, en ese orden.
+---
 
-## Tenga en cuenta
+## ¿Cómo funciona la solución?
 
-- **Planificar** antes de codificar (diagramas, esquemas, pseudocódigo).
-- **Construir código que se autoexplique**.
-- **Usar los commits** para documentar el proceso.
+Se asigna un dígito a cada letra una a una. Para cada letra se prueban los dígitos del 0 al 9 en orden. Si el dígito ya está usado por otra letra, se salta. Cuando todas las letras tienen un dígito asignado, se construyen los números SEND, MORE y MONEY y se comprueba si la suma es correcta. Si no lo es, se deshace la última asignación y se prueba el siguiente dígito. Este proceso de volver atrás y probar otra cosa se llama **backtracking**.
+
+---
+
+## Algoritmo recursivo
+
+La función se llama a sí misma con la siguiente letra en cada paso.
+
+**Caso base:** cuando todas las letras están asignadas, se verifica si la suma es correcta. Si lo es, se ha encontrado la solución. Si no, se devuelve `false` y la función vuelve atrás automáticamente.
+
+**Caso recursivo:** si aún quedan letras sin asignar, se prueba cada dígito disponible para la letra actual y se llama a la misma función con la siguiente letra.
+
+**Backtracking:** cuando ningún dígito funciona para una letra, la función devuelve `false` y el nivel anterior prueba el siguiente dígito. Este retroceso es automático gracias a la pila de llamadas de Java.
+
+---
+
+## Algoritmo iterativo
+
+Hace exactamente lo mismo que el recursivo pero sin llamarse a sí mismo. En su lugar usa una variable de posición que avanza o retrocede manualmente.
+
+**Equivalente al caso base:** cuando la posición llega a la última letra, se verifica si la suma es correcta.
+
+**Equivalente al avance recursivo:** si se encontró un dígito válido y no es la última letra, la posición avanza a la siguiente.
+
+**Equivalente al backtracking:** si ningún dígito funcionó para la letra actual, la posición retrocede a la anterior y se libera el dígito que tenía asignado.
+
+**Condición de parada:** cuando la posición cae por debajo de cero, significa que se han agotado todas las combinaciones posibles y el bucle termina.
+
+---
+
+## Diferencias entre ambos enfoques
+
+| | Recursivo | Iterativo |
+|---|---|---|
+| Longitud del código | Corto | Más largo |
+| Legibilidad | Alta | Media |
+| Backtracking | Automático | Manual |
+| Caso base | Cuando todas las letras están asignadas | Cuando la posición llega a la última letra |
+| Parada | La función devuelve false | La posición cae por debajo de cero |
+
+---
+
+
+- Cueva Lovelle, J.M. — *Lenguajes, Gramáticas y Autómatas* (2001), Universidad de Oviedo
+- Problema clásico de criptaritmética propuesto por Henry Dudeney (1924)
