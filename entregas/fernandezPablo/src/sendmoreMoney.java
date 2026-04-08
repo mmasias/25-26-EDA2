@@ -1,64 +1,55 @@
 public class sendmoreMoney {
 
-    static int[] valores = new int[8];
-    static boolean[] usados = new boolean[10];
+    static int S, E, N, D, M, O, R, Y;
+    
+    static boolean[] usado = new boolean[10];
 
     public static void main(String[] args) {
-        System.out.println("Buscando solución para SEND + MORE = MONEY...\n");
-        if (!resolver(0)) {
-            System.out.println("No se encontró solución.");
-        }
+        System.out.println("Buscando solución...\n");
+        resolver(0);
     }
 
-    static boolean resolver(int indiceLetra) {
-        if (indiceLetra == 8) {
-            return comprobarSuma();
-        }
-
-        for (int digito = 0; digito <= 9; digito++) {
-            if (!usados[digito]) {
-                
-                valores[indiceLetra] = digito;
-                usados[digito] = true;
-
-                if (resolver(indiceLetra + 1)) {
-                    return true;
-                }
-
-                usados[digito] = false;
-            }
-        }
+    static boolean resolver(int paso) {
         
-        return false;
-    }
+        if (paso == 8) {
+            if (S == 0 || M == 0) return false;
 
-    static boolean comprobarSuma() {
-        int S = valores[0];
-        int E = valores[1];
-        int N = valores[2];
-        int D = valores[3];
-        int M = valores[4];
-        int O = valores[5];
-        int R = valores[6];
-        int Y = valores[7];
+            int send = S * 1000 + E * 100 + N * 10 + D;
+            int more = M * 1000 + O * 100 + R * 10 + E;
+            int money = M * 10000 + O * 1000 + N * 100 + E * 10 + Y;
 
-        if (S == 0 || M == 0) {
+            if (send + more == money) {
+                System.out.println("  " + send);
+                System.out.println("+ " + more);
+                System.out.println("-------");
+                System.out.println(" " + money);
+                return true;
+            }
             return false;
         }
 
-        int send =  S * 1000 + E * 100 + N * 10 + D;
-        int more =  M * 1000 + O * 100 + R * 10 + E;
-        int money = M * 10000 + O * 1000 + N * 100 + E * 10 + Y;
+        for (int digito = 0; digito <= 9; digito++) {
+            if (!usado[digito]) {
+                
+                usado[digito] = true;
+                
+                if      (paso == 0) S = digito;
+                else if (paso == 1) E = digito;
+                else if (paso == 2) N = digito;
+                else if (paso == 3) D = digito;
+                else if (paso == 4) M = digito;
+                else if (paso == 5) O = digito;
+                else if (paso == 6) R = digito;
+                else if (paso == 7) Y = digito;
 
-        if (send + more == money) {
-            System.out.println("¡Solución encontrada!");
-            System.out.println("  " + send + " (SEND)");
-            System.out.println("+ " + more + " (MORE)");
-            System.out.println("-------");
-            System.out.println(" " + money + " (MONEY)");
-            return true;
+                if (resolver(paso + 1)) {
+                    return true; 
+                }
+
+                usado[digito] = false;
+            }
         }
-
+        
         return false;
     }
 }
