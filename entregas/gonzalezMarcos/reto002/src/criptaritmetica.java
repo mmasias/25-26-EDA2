@@ -1,4 +1,4 @@
-public class Criptaritmetica {
+public class criptaritmetica {
 
     private final char[]    letras;
     private final int[]     asignacion;
