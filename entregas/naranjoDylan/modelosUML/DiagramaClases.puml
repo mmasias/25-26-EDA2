@@ -1,0 +1,27 @@
+@startuml
+title Diagrama de Clases
+
+class App
+
+class Criptaritmo {
+  - String[] sumandos
+  - String resultado
+}
+
+class SolverCriptaritmo {
+  - int[] asignacion
+  - boolean[] usado
+  - boolean[] noCero
+  + resolver()
+}
+
+class ResultadoCriptaritmo {
+  - int[] asignacion
+  - boolean tieneSolucion
+}
+
+App --> SolverCriptaritmo
+SolverCriptaritmo --> Criptaritmo
+SolverCriptaritmo --> ResultadoCriptaritmo
+
+@enduml

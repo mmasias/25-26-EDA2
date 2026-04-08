@@ -1,0 +1,32 @@
+@startuml
+start
+
+:resolver();
+
+:backtrack();
+
+if (columna final?) then (sí)
+  if (acarreo == 0?) then (sí)
+    :solución válida;
+    stop
+  else
+    :fallo;
+    stop
+  endif
+endif
+
+:probar asignaciones;
+
+if (válido?) then (sí)
+  :hacer;
+  :recursión;
+  if (ok?) then (sí)
+    stop
+  else
+    :deshacer;
+  endif
+else
+  :poda;
+endif
+
+@enduml
