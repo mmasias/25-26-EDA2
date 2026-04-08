@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class CriptoAritmetica {
 
     public static void main(String[] args) {
@@ -17,16 +12,26 @@ public class CriptoAritmetica {
     }
 
     public static void resolverAcertijo(String[] sumandos, String resultado) {
-        List<Character> letrasUnicas = new ArrayList<>();
+        char[] letrasUnicas = new char[10];
+        int cantidadLetras = 0;
+        boolean[] letraVista = new boolean[256];
         boolean[] noPuedeSerCero = new boolean[256];
 
-        for (String palabra : sumandos) {
+        for (int i = 0; i < sumandos.length; i++) {
+            String palabra = sumandos[i];
             if (palabra.length() > 1) {
                 noPuedeSerCero[palabra.charAt(0)] = true;
             }
-            for (char c : palabra.toCharArray()) {
-                if (!letrasUnicas.contains(c)) {
-                    letrasUnicas.add(c);
+            for (int j = 0; j < palabra.length(); j++) {
+                char c = palabra.charAt(j);
+                if (!letraVista[c]) {
+                    if (cantidadLetras == 10) {
+                        System.out.println("Invalido");
+                        return;
+                    }
+                    letraVista[c] = true;
+                    letrasUnicas[cantidadLetras] = c;
+                    cantidadLetras++;
                 }
             }
         }
@@ -34,66 +39,68 @@ public class CriptoAritmetica {
         if (resultado.length() > 1) {
             noPuedeSerCero[resultado.charAt(0)] = true;
         }
-        for (char c : resultado.toCharArray()) {
-            if (!letrasUnicas.contains(c)) {
-                letrasUnicas.add(c);
+        for (int j = 0; j < resultado.length(); j++) {
+            char c = resultado.charAt(j);
+            if (!letraVista[c]) {
+                if (cantidadLetras == 10) {
+                    System.out.println("Invalido");
+                    return;
+                }
+                letraVista[c] = true;
+                letrasUnicas[cantidadLetras] = c;
+                cantidadLetras++;
             }
         }
 
-        if (letrasUnicas.size() > 10) {
-            System.out.println("Invalido");
-            return;
-        }
-
-        Map<Character, Integer> mapaAsignaciones = new HashMap<>();
+        int[] asignaciones = new int[256];
         boolean[] digitosUsados = new boolean[10];
 
-        if (!asignarLetrasRecursivo(0, letrasUnicas, mapaAsignaciones, digitosUsados, noPuedeSerCero, sumandos, resultado)) {
+        if (!asignarLetrasRecursivo(0, letrasUnicas, cantidadLetras, asignaciones, digitosUsados, noPuedeSerCero, sumandos, resultado)) {
             System.out.println("Sin solucion");
         }
     }
 
-    private static boolean asignarLetrasRecursivo(int indice, List<Character> letrasUnicas,
-                                                  Map<Character, Integer> asignaciones, boolean[] digitosUsados,
+    private static boolean asignarLetrasRecursivo(int indice, char[] letrasUnicas, int cantidadLetras,
+                                                  int[] asignaciones, boolean[] digitosUsados,
                                                   boolean[] noPuedeSerCero, String[] sumandos, String resultado) {
         
-        if (indice == letrasUnicas.size()) {
-            return comprobarSuma(asignaciones, sumandos, resultado);
+        if (indice == cantidadLetras) {
+            return comprobarSuma(asignaciones, sumandos, resultado, letrasUnicas, cantidadLetras);
         }
 
-        char letraActual = letrasUnicas.get(indice);
+        char letraActual = letrasUnicas[indice];
 
         for (int digito = 0; digito <= 9; digito++) {
             if (!digitosUsados[digito]) {
                 if (digito != 0 || !noPuedeSerCero[letraActual]) {
-                    asignaciones.put(letraActual, digito);
+                    asignaciones[letraActual] = digito;
                     digitosUsados[digito] = true;
 
-                    if (asignarLetrasRecursivo(indice + 1, letrasUnicas, asignaciones, digitosUsados, noPuedeSerCero, sumandos, resultado)) {
+                    if (asignarLetrasRecursivo(indice + 1, letrasUnicas, cantidadLetras, asignaciones, digitosUsados, noPuedeSerCero, sumandos, resultado)) {
                         return true;
                     }
 
                     digitosUsados[digito] = false;
-                    asignaciones.remove(letraActual);
                 }
             }
         }
         return false;
     }
 
-    private static boolean comprobarSuma(Map<Character, Integer> asignaciones, String[] sumandos, String resultado) {
+    private static boolean comprobarSuma(int[] asignaciones, String[] sumandos, String resultado, char[] letrasUnicas, int cantidadLetras) {
         long sumaAcumulada = 0;
         
-        for (String palabra : sumandos) {
-            sumaAcumulada += convertirPalabraANumero(palabra, asignaciones);
+        for (int i = 0; i < sumandos.length; i++) {
+            sumaAcumulada += convertirPalabraANumero(sumandos[i], asignaciones);
         }
         
         long valorResultado = convertirPalabraANumero(resultado, asignaciones);
 
         if (sumaAcumulada == valorResultado) {
             System.out.print("Valores asignados: ");
-            for (Map.Entry<Character, Integer> entrada : asignaciones.entrySet()) {
-                System.out.print("[" + entrada.getKey() + "=" + entrada.getValue() + "] ");
+            for (int i = 0; i < cantidadLetras; i++) {
+                char c = letrasUnicas[i];
+                System.out.print("[" + c + "=" + asignaciones[c] + "] ");
             }
             System.out.println("\n");
 
@@ -108,10 +115,11 @@ public class CriptoAritmetica {
         return false;
     }
 
-    private static long convertirPalabraANumero(String palabra, Map<Character, Integer> asignaciones) {
+    private static long convertirPalabraANumero(String palabra, int[] asignaciones) {
         long numero = 0;
-        for (char c : palabra.toCharArray()) {
-            numero = (numero * 10) + asignaciones.get(c);
+        for (int i = 0; i < palabra.length(); i++) {
+            char c = palabra.charAt(i);
+            numero = (numero * 10) + asignaciones[c];
         }
         return numero;
     }
