@@ -1,25 +1,23 @@
+package propuestChatGPT;
 import java.util.*;
 
-public class CriptoAlgorithm {
+public class ImplementacionChatGPT {
 
+    public int contador = 0;
     private Map<Character, Integer> mapa = new HashMap<>();
     private boolean[] usados = new boolean[10];
 
     void resolver(char[] letras, int index, char[][] suma, char[] resultado) {
-
-        // Caso base
         if (index == letras.length) {
+            contador++; 
             if (esValido(suma, resultado)) {
                 imprimir(suma, resultado);
             }
             return;
         }
 
-        // Probar todos los dígitos
         for (int d = 0; d <= 9; d++) {
-
             if (!usados[d]) {
-
                 mapa.put(letras[index], d);
                 usados[d] = true;
 
@@ -93,19 +91,18 @@ public class CriptoAlgorithm {
     }
 
     public static void main(String[] args) {
-
         final String[] WORDS = {"SEND", "MORE", "MONEY"};
 
         char[][] suma = {
                 WORDS[0].toCharArray(),
                 WORDS[1].toCharArray()
         };
-
         char[] resultado = WORDS[2].toCharArray();
-
         char[] letras = obtenerLetrasUnicas(WORDS);
 
-        CriptoAlgorithm solver = new CriptoAlgorithm();
+        ImplementacionChatGPT solver = new ImplementacionChatGPT();
         solver.resolver(letras, 0, suma, resultado);
+        
+        System.out.println("Total de combinaciones completas revisadas: " + solver.contador);
     }
 }
