@@ -1,3 +1,6 @@
-# Documentos de referencia
+# Participantes:
 
-- [CriptoAritmo](/entregas/cotareloDaniel/src/CriptoAritmo.java)
+## Ismael Cobo
+## Alejandro de la Peña
+## Paula Oreja
+## Daniel Cotarelo
