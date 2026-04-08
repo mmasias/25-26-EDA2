@@ -1,3 +1,0 @@
-AaronUreta
-ArellanoDiego
-juanfercaicedo
