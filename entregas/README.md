@@ -1,37 +1,38 @@
-# Carpeta de entregas
+# Documento de Diseño - Reto - 002
 
-Para cada entrega, cree en esta carpeta su carpeta personal usando el estándar `apellidoNombre`.
+## 1. Contexto y Estrategia
+El objetivo es resolver acertijos de criptoaritmética mediante un algoritmo recursivo de **Backtracking**. 
+Para evitar programar una solución que solo resuelva un solo acertijo, el algoritmo tratará el problema abstrayendo las palabras. Lo que haré sera ir asignando valores a las letras de forma secuencial y evaluando la suma matemáticamente solo en el Caso Base.
 
-## Estructura
+## 2. Análisis (Casos de Prueba)
 
-```
-/entregas/apellidoNombre/README.md   <-- Presentación de la entrega
-                        /src         <-- Código fuente
-                        /modelosUML  <-- Modelos en plantUML
-                        /docs        <-- Documentación adicional
-                        /images      <-- Imágenes, diagramas...
-```
+### Caso A: `FORTY + TEN + TEN = SIXTY`
+* **Letras únicas (El Estado):** `[F, O, R, T, Y, E, N, S, I, X]` (Total: 10 letras). 
+* **Letras prohibidas para el 0 (La Poda):** `F`, `T`, `S` (Letras iniciales de cada palabra).
 
-## Artefactos habituales
+### Caso B: `ODD + ODD = EVEN`
+* **Letras únicas (El Estado):** `[O, D, E, V, N]` (Total: 5 letras).
+* **Letras prohibidas para el 0 (La Poda):** `O`, `E`.
 
-||||
-|-|-|-|
-|1|**README.md**|Presentación de la entrega, con explicación de la solución y referencias al resto de artefactos. ¡Navegabilidad!|
-|2|**Código fuente**|Proyecto ordenado dentro de `/src`.|
-|3|**Diagramas**|Fuente en `/modelosUML`, exportado en `/images`, referenciado en los .md pertinentes.|
-|4|**Documentación adicional**|En `/docs`, en formato markdown (u otro formato, solo si se solicita explícitamente).|
+## 3. Arquitectura del Algoritmo
 
-> Cada reto indicará qué artefactos son obligatorios y cuáles opcionales.
+### 3.1. Preparacion
+Para que el algoritmo sea universal, **no escribiré en el código las variables estáticas**. El (`main`) recibirá las palabras involucradas y automatizará el "tablero":
+1. Leerá todas las palabras y extraerá un array estricto de **letras únicas**.
+2. Leerá el índice `0` de cada palabra y guardará estas letras en un registro de **iniciales prohibidas**.
 
-## Criterios de valoración
+### 3.2. La Poda (`puedeColocar`)
+Antes de registrar un dígito ("Hacer"), se aplican dos reglas de cortocircuito lógico:
+* **Exclusividad:** ¿El dígito candidato ya está en el array de `usados`? -> `return false`.
+* **Ceros a la izquierda:** ¿El dígito es `0` y la letra actual está en el registro de *iniciales prohibidas*? -> `return false`.
 
-- **Proceso de creación** — commits bien descritos, un cambio por commit.
-- **Código limpio** — innegociable.
-- **Adecuado reparto de responsabilidades** entre módulos.
-- **Aplicación de lo visto en la vida, en el grado, en la asignatura y en las clases**, en ese orden.
+### 3.3. Caso Base y Conversión Matemática
+La recursividad se detiene cuando el índice actual es igual a la longitud del array de letras únicas (profundidad máxima alcanzada).
+En este punto, se transforman las palabras en números enteros leyendo de izquierda a derecha mediante la técnica de desplazamiento en Base 10:
 
-## Tenga en cuenta
-
-- **Planificar** antes de codificar (diagramas, esquemas, pseudocódigo).
-- **Construir código que se autoexplique**.
-- **Usar los commits** para documentar el proceso.
+```text
+Algoritmo de conversión:
+acumulador = 0
+Para cada letra en la palabra:
+    acumulador = (acumulador * 10) + mapaDeAsignaciones[letra]
+Retornar acumulador
