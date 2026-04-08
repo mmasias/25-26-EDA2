@@ -9,7 +9,6 @@ public class AlgoritmoRecursivo {
     }
 
     private static void resolver(String[] sumandos, String resultado) {
-        // Recogemos todas las letras únicas
         String letras = "";
         for (String palabra : sumandos) {
             for (char c : palabra.toCharArray()) {
@@ -24,13 +23,11 @@ public class AlgoritmoRecursivo {
             }
         }
 
-        // Arrancamos la recursión desde la primera letra
         asignar(letras, 0, sumandos, resultado);
     }
 
     private static void asignar(String letras, int pos, String[] sumandos, String resultado) {
 
-        // CASO BASE: todas las letras asignadas → verificar suma
         if (pos == letras.length()) {
             if (verificar(sumandos, resultado)) {
                 imprimir(letras, sumandos, resultado);
@@ -40,19 +37,15 @@ public class AlgoritmoRecursivo {
 
         char letra = letras.charAt(pos);
 
-        // Probamos cada dígito para esta letra
         for (int d = 0; d <= 9; d++) {
             if (usado[d]) continue;
             if (d == 0 && esInicial(letra, sumandos, resultado)) continue;
 
-            // Asignamos el dígito
             digito[letra - 'A'] = d;
             usado[d] = true;
 
-            // Llamada recursiva: siguiente letra
             asignar(letras, pos + 1, sumandos, resultado);
 
-            // Backtrack: liberamos el dígito
             digito[letra - 'A'] = 0;
             usado[d] = false;
         }
