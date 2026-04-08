@@ -49,7 +49,7 @@ La función `puedeAsignar` aplica dos descartes antes de explorar la rama:
 
 ## Código fuente
 
-- [`src/Criptaritmetica.java`](src/Criptaritmetica.java) — clase genérica (acepta
+- [`src/criptaritmetica.java`](src/criptaritmetica.java) — clase genérica (acepta
   cualquier puzzle como arrays de strings).
 
 ---
