@@ -26,10 +26,10 @@ public class FortyTen {
         }
 
         boolean found = false;
-        char c = letters[index];
+        char character = letters[index];
 
-        if (!used[digit] && !(digit == 0 && isLeading(c, words, result))) {
-            mapping[c] = digit;
+        if (!used[digit] && !(digit == 0 && isLeading(character, words, result))) {
+            mapping[character] = digit;
             used[digit] = true;
 
             if (solve(letters, index + 1, mapping, used, words, result)) {
