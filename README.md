@@ -6,3 +6,5 @@ Rama de entregas de retos y ejercicios de la asignatura **Estructura de datos y 
 
 - Lea lo indicado en el [README de la carpeta de entregas](entregas/README.md).
 - Para la entrega de cada reto planteado cree una rama a partir de esta rama, siguiendo las instrucciones indicadas en dicho ejercicio, trabajo o reto.
+
+## [CÓDIGO](entregas/cuestaAlejandra/src/SendMoreMoney.java)
