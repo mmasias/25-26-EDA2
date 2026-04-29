@@ -1,0 +1,74 @@
+@startuml diagramaClases
+
+title Reto 003 - Algoritmos de Ordenacion con Traza
+
+class Main {
+  + main(args: String[]): void
+  - ejecutarInsertionIterativo(): void
+  - ejecutarInsertionRecursivo(): void
+  - ejecutarMergeRecursivo(): void
+  - ejecutarMergeIterativo(): void
+  - ejecutarQuickSort(): void
+  - formatear(array: int[]): String
+}
+
+class InsertionSortIterativo {
+  + ordenar(array: int[]): void
+  - formatear(array: int[]): String
+}
+
+class InsertionSortRecursivo {
+  + ordenar(array: int[], n: int): void
+  - ordenar(array: int[], n: int, nivel: int): void
+  - indentacion(nivel: int): String
+  - formatear(array: int[]): String
+}
+
+class MergeSortRecursivo {
+  + ordenar(array: int[], izquierda: int, derecha: int): void
+  - ordenar(array: int[], izquierda: int, derecha: int, nivel: int): void
+  - fusionar(array: int[], izquierda: int, medio: int, derecha: int, nivel: int): void
+  - indentacion(nivel: int): String
+  - formatear(array: int[]): String
+}
+
+class MergeSortIterativo {
+  + ordenarIterativo(array: int[]): void
+  - fusionar(array: int[], izquierda: int, medio: int, derecha: int, nivel: int): void
+  - indentacion(nivel: int): String
+  - formatear(array: int[]): String
+}
+
+class QuickSort {
+  + ordenar(array: int[], izquierda: int, derecha: int): void
+  - ordenar(array: int[], izquierda: int, derecha: int, nivel: int): void
+  - particionar(array: int[], izquierda: int, derecha: int, nivel: int): int
+  - indentacion(nivel: int): String
+  - formatear(array: int[]): String
+}
+
+Main ..> InsertionSortIterativo : usa
+Main ..> InsertionSortRecursivo : usa
+Main ..> MergeSortRecursivo : usa
+Main ..> MergeSortIterativo : usa
+Main ..> QuickSort : usa
+
+note right of Main
+  Punto de entrada unico.
+  Sin logica de ordenacion.
+  Cada algoritmo se ejecuta
+  con array de prueba {5,2,8,1,9,3}.
+end note
+
+note bottom of MergeSortRecursivo
+  Indentacion proporcional
+  al nivel de recursion.
+end note
+
+note bottom of QuickSort
+  Indentacion proporcional
+  al nivel de recursion.
+  Pivote = ultimo elemento.
+end note
+
+@enduml
