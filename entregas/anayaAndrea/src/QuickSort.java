@@ -1,20 +1,28 @@
 public class QuickSort {
 
     private static String arrToString(int[] arr) {
-        String res = "[";
+        StringBuilder res = new StringBuilder("[");
         for (int i = 0; i < arr.length; i++) {
-            res += arr[i] + (i < arr.length - 1 ? ", " : "");
+            res.append(arr[i]);
+            if (i < arr.length - 1) {
+                res.append(", ");
+            }
         }
-        return res + "]";
+        res.append("]");
+        return res.toString();
     }
 
     private static String subArrToString(int[] arr, int ini, int fin) {
         if (ini > fin) return "[]";
-        String res = "[";
+        StringBuilder res = new StringBuilder("[");
         for (int i = ini; i <= fin; i++) {
-            res += arr[i] + (i < fin ? ", " : "");
+            res.append(arr[i]);
+            if (i < fin) {
+                res.append(", ");
+            }
         }
-        return res + "]";
+        res.append("]");
+        return res.toString();
     }
 
     private static void printIndent() {
@@ -55,12 +63,13 @@ public class QuickSort {
         
         for (int j = izquierda; j < derecha; j++) {
             if (array[j] <= pivote) {
-                printIndent();
-                System.out.println("  " + array[j] + " <= " + pivote + " -> Si. Intercambiamos posiciones " + (i+1) + " y " + j);
                 i++;
+                printIndent();
+                System.out.print("  " + array[j] + " <= " + pivote + " -> Si. Intercambiamos posiciones " + i + " y " + j);
                 int temporal = array[i];
                 array[i] = array[j];
                 array[j] = temporal;
+                System.out.println(" -> Array actual: " + arrToString(array));
             } else {
                 printIndent();
                 System.out.println("  " + array[j] + " <= " + pivote + " -> No.");
@@ -68,11 +77,13 @@ public class QuickSort {
         }
         
         printIndent();
-        System.out.println("  Intercambiamos el pivote " + array[derecha] + " con la posicion " + (i+1));
+        System.out.print("  Movemos el pivote " + pivote + " a la posicion " + (i+1));
         
         int temporal = array[i + 1];
         array[i + 1] = array[derecha];
         array[derecha] = temporal;
+        
+        System.out.println(" -> Array resultante: " + arrToString(array));
         
         return i + 1;
     }
