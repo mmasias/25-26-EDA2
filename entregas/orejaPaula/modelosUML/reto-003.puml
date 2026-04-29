@@ -1,0 +1,15 @@
+@startuml
+class Main
+class InsertionSort
+class MergeSort
+class QuickSort
+class Trazas
+
+Main --> InsertionSort
+Main --> MergeSort
+Main --> QuickSort
+
+InsertionSort --> Trazas
+MergeSort --> Trazas
+QuickSort --> Trazas
+@enduml
