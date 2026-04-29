@@ -3,3 +3,6 @@
 - [InsertionSort](/entregas/cotareloDaniel/src/InsertionSort.java)
 - [MergeSort](/entregas/cotareloDaniel/src/MergeSort.java)
 - [QuickSort](/entregas/cotareloDaniel/src/QuickSort.java)
+- [Memoria_Trazas_Algoritmos](/entregas/cotareloDaniel/docs/memoria_trazas_algoritmos.md)
+- [uml_trazas_algoritmos](/entregas/cotareloDaniel/modelosUML/uml_trazas_algoritmos.puml)
+- [imagen_uml_trazas_algoritmos](/entregas/cotareloDaniel/images/imagen_uml_trazas_algoritmos.png)
