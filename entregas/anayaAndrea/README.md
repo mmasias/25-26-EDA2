@@ -21,3 +21,37 @@ Esta carpeta contiene la implementación y documentación para el "Reto de recup
 - Array de prueba estándar utilizado: `{5, 2, 8, 1, 9, 3}`.
 
 *Consulte la [Documentación Adicional](docs/Explicacion_Reto.md) para más detalles.*
+
+## 📊 Arquitectura de Clases (Renderizado Nativo en GitHub)
+
+Dado que GitHub no renderiza archivos `.puml` automáticamente, a continuación se incluye el equivalente del diagrama en **Mermaid**, el cual está soportado de forma nativa:
+
+```mermaid
+classDiagram
+    class InsertionSort {
+        -int depth$
+        -arrToString(arr: int[])$ String
+        -printIndent(depth: int)$ void
+        +ordenar(array: int[])$ void
+        +ordenar(array: int[], n: int)$ void
+    }
+
+    class MergeSort {
+        -int depth$
+        -arrToString(arr: int[])$ String
+        -subArrToString(arr: int[], ini: int, fin: int)$ String
+        -printIndent()$ void
+        -fusionar(array: int[], izquierda: int, medio: int, derecha: int)$ void
+        +ordenar(array: int[], izquierda: int, derecha: int)$ void
+        +ordenarIterativo(array: int[])$ void
+    }
+
+    class QuickSort {
+        -int depth$
+        -arrToString(arr: int[])$ String
+        -subArrToString(arr: int[], ini: int, fin: int)$ String
+        -printIndent()$ void
+        -particionar(array: int[], izquierda: int, derecha: int)$ int
+        +ordenar(array: int[], izquierda: int, derecha: int)$ void
+    }
+```
