@@ -7,25 +7,28 @@ package "Algoritmos de Ordenación" {
 
     class InsertionSort {
         - {static} depth: int
-        - {static} str(a: int[]): String
+        - {static} arrToString(arr: int[]): String
+        - {static} printIndent(depth: int): void
         + {static} ordenar(array: int[]): void
         + {static} ordenar(array: int[], n: int): void
     }
 
     class MergeSort {
         - {static} depth: int
-        - {static} str(a: int[]): String
-        - {static} subStr(a: int[], lo: int, hi: int): String
-        - {static} fusionar(array: int[], izquierda: int, medio: int, derecha: int, ind: String): void
+        - {static} arrToString(arr: int[]): String
+        - {static} subArrToString(arr: int[], ini: int, fin: int): String
+        - {static} printIndent(): void
+        - {static} fusionar(array: int[], izquierda: int, medio: int, derecha: int): void
         + {static} ordenar(array: int[], izquierda: int, derecha: int): void
         + {static} ordenarIterativo(array: int[]): void
     }
 
     class QuickSort {
         - {static} depth: int
-        - {static} str(a: int[]): String
-        - {static} subStr(a: int[], lo: int, hi: int): String
-        - {static} particionar(array: int[], izquierda: int, derecha: int, ind: String): int
+        - {static} arrToString(arr: int[]): String
+        - {static} subArrToString(arr: int[], ini: int, fin: int): String
+        - {static} printIndent(): void
+        - {static} particionar(array: int[], izquierda: int, derecha: int): int
         + {static} ordenar(array: int[], izquierda: int, derecha: int): void
     }
 }
