@@ -1,4 +1,4 @@
-# Explicacion del Proyecto: Trazabilidad de Algoritmos
+# Explicacion del Reto
 
 En este documento explico como he organizado el codigo para añadir los mensajes de seguimiento a los algoritmos de ordenacion, cumpliendo con la regla de no tocar la logica principal.
 
