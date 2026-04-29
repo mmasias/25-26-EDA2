@@ -1,0 +1,44 @@
+@startuml diagramaRetoRecuperacion
+
+class InsertionSortIterativo {
+    - arrayATexto(array: int[]): String
+    + ordenar(array: int[]): void
+    + main(args: String[]): void
+}
+
+class InsertionSortRecursivo {
+    - nivelRecursion: int
+    - sangria(): String
+    - arrayATexto(array: int[]): String
+    - rangoATexto(array: int[], inicio: int, fin: int): String
+    + ordenar(array: int[], numeroElementos: int): void
+    + main(args: String[]): void
+}
+
+class MergeSortIterativo {
+    - arrayATexto(array: int[]): String
+    - rangoATexto(array: int[], inicio: int, fin: int): String
+    - fusionar(array: int[], iz: int, medio: int, der: int): void
+    + ordenarIterativo(array: int[]): void
+}
+
+class MergeSortRecursivo {
+    - nivelRecursion: int
+    - sangria(): String
+    - arrayATexto(array: int[]): String
+    - rangoATexto(array: int[], inicio: int, fin: int): String
+    - fusionar(array: int[], iz: int, medio: int, der: int): void
+    + ordenar(array: int[], izquierda: int, derecha: int): void
+}
+
+class QuickSort {
+    - nivelRecursion: int
+    - sangria(): String
+    - arrayATexto(array: int[]): String
+    - rangoATexto(array: int[], inicio: int, fin: int): String
+    - particionar(array: int[], iz: int, der: int): int
+    + ordenar(array: int[], izquierda: int, derecha: int): void
+    + main(args: String[]): void
+}
+
+@enduml
