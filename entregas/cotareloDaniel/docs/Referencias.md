@@ -1,0 +1,5 @@
+- [TrazasAlgoritmosOrdenacion](/entregas/cotareloDaniel/src/TrazasAlgoritmosOrdenacion.java)
+- [Formato](/entregas/cotareloDaniel/src/Formato.java)
+- [InsertionSort](/entregas/cotareloDaniel/src/InsertionSort.java)
+- [MergeSort](/entregas/cotareloDaniel/src/MergeSort.java)
+- [QuickSort](/entregas/cotareloDaniel/src/QuickSort.java)
