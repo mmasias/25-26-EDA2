@@ -8,6 +8,7 @@
 
 ### 2. Merge Sort (Ordenación por Mezcla)
 - **Versión Recursiva**: Basado en el paradigma "Divide y Vencerás". La traza muestra cómo el array original se va dividiendo a la mitad repetidamente, alcanzando los casos base (sub-arrays de tamaño 1), y luego muestra la fusión ordenada paso a paso registrando de qué mitad (izquierda o derecha) se toman los valores.
+- **Diagrama de Secuencia**: Se ha incluido un [Diagrama de Secuencia de Merge Sort](../modelosUML/MergeSort_Secuencia.puml) que visualiza de manera temporal las llamadas recursivas de división y la posterior fusión, mostrando de manera clara cómo fluyen las sub-listas de tamaño decreciente a creciente.
 - **Versión Iterativa (Bottom-up)**: Realiza la fusión en bloques (tamaño 1, 2, 4, 8...). Se traza el estado del array antes y después de fusionar cada bloque.
 
 ### 3. Quick Sort (Ordenación Rápida)
@@ -23,4 +24,4 @@
 6. **Array de Prueba Único**: Las pruebas principales están configuradas para ejecutarse con `{5, 2, 8, 1, 9, 3}` según las especificaciones.
 
 ## Conclusión
-Sin alterar la lógica original de ordenamiento, la instrumentación del código ha proporcionado una herramienta exhaustiva que permite entender de forma determinista la evolución interna de cada estructura de datos.
+Sin alterar la lógica original de ordenamiento, la instrumentación del código ha proporcionado una herramien que permite entender de forma determinista la evolución interna de cada estructura de datos.
