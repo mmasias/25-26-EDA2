@@ -14,12 +14,12 @@ public class InsertionSortIterativo {
         for (int i = 1; i < array.length; i++) {
             System.out.println("Iteración " + i + ":");
             int actual = array[i];
-            System.out.println("Valor actual: " + actual);
+            System.out.println("    Valor actual: " + actual);
             int j = i - 1;
-            System.out.println("A recorrer desde el indice " + j + " del array");
+            System.out.println("    A recorrer desde el indice " + j + " del array");
             while (j >= 0 && array[j] > actual) {
-                System.out.println("Comparando " + array[j] + " con " + actual);
-                System.out.println("El elemento " + array[j] + " es mayor que " + actual + ", moviendo " + array[j]
+                System.out.println("    Comparando " + array[j] + " con " + actual);
+                System.out.println("    El elemento " + array[j] + " es mayor que " + actual + ", moviendo " + array[j]
                         + " a la posición " + (j + 1));
                 array[j + 1] = array[j];
                 j--;
