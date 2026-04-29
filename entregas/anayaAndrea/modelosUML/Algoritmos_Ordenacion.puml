@@ -1,0 +1,37 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+
+package "Algoritmos de Ordenación" {
+
+    class InsertionSort {
+        - {static} depth: int
+        - {static} str(a: int[]): String
+        + {static} ordenar(array: int[]): void
+        + {static} ordenar(array: int[], n: int): void
+    }
+
+    class MergeSort {
+        - {static} depth: int
+        - {static} str(a: int[]): String
+        - {static} subStr(a: int[], lo: int, hi: int): String
+        - {static} fusionar(array: int[], izquierda: int, medio: int, derecha: int, ind: String): void
+        + {static} ordenar(array: int[], izquierda: int, derecha: int): void
+        + {static} ordenarIterativo(array: int[]): void
+    }
+
+    class QuickSort {
+        - {static} depth: int
+        - {static} str(a: int[]): String
+        - {static} subStr(a: int[], lo: int, hi: int): String
+        - {static} particionar(array: int[], izquierda: int, derecha: int, ind: String): int
+        + {static} ordenar(array: int[], izquierda: int, derecha: int): void
+    }
+}
+
+note bottom of InsertionSort : Incluye las lógicas de traza\npara desplazar elementos iterativa\ny recursivamente.
+note bottom of MergeSort : Implementación del enfoque\nDivide y Vencerás. Trazas en\ndivisión y en fusión.
+note bottom of QuickSort : Traza detallada de cada\nintercambio durante la\nfase de particionado.
+
+@enduml

@@ -1,117 +1,88 @@
 public class QuickSort {
 
-    // =========================================================================
-    // AUXILIARES
-    // =========================================================================
-
-    private static String str(int[] a) {
-        StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < a.length; i++) {
-            sb.append(a[i]);
-            if (i < a.length - 1) sb.append(", ");
+    private static String arrToString(int[] arr) {
+        String res = "[";
+        for (int i = 0; i < arr.length; i++) {
+            res += arr[i] + (i < arr.length - 1 ? ", " : "");
         }
-        return sb.append("]").toString();
+        return res + "]";
     }
 
-    private static String subStr(int[] a, int lo, int hi) {
-        if (lo > hi) return "[]";
-        StringBuilder sb = new StringBuilder("[");
-        for (int i = lo; i <= hi; i++) {
-            sb.append(a[i]);
-            if (i < hi) sb.append(", ");
+    private static String subArrToString(int[] arr, int ini, int fin) {
+        if (ini > fin) return "[]";
+        String res = "[";
+        for (int i = ini; i <= fin; i++) {
+            res += arr[i] + (i < fin ? ", " : "");
         }
-        return sb.append("]").toString();
+        return res + "]";
     }
 
-    // Contador de profundidad de recursión
+    private static void printIndent() {
+        for (int i = 0; i < depth; i++) {
+            System.out.print("  ");
+        }
+    }
+
     private static int depth = 0;
 
-    // =========================================================================
-    // QUICK SORT
-    // =========================================================================
-
     public static void ordenar(int[] array, int izquierda, int derecha) {
-        String ind = "  ".repeat(depth);
-
-        System.out.println(ind + "→ ordenar(izq=" + izquierda + ", der=" + derecha + ")  "
-                + subStr(array, izquierda, derecha));
-
+        printIndent();
+        System.out.println("Llamada ordenar(izq=" + izquierda + ", der=" + derecha + ") en " + subArrToString(array, izquierda, derecha));
+        
         if (izquierda >= derecha) {
-            System.out.println(ind + "  [CASO BASE] izquierda(" + izquierda
-                    + ") >= derecha(" + derecha + ")  →  subarreglo trivial, retornar");
+            printIndent();
+            System.out.println("Caso base alcanzado: izquierda >= derecha.");
             return;
         }
-
-        System.out.println(ind + "  Pivote elegido: array[der=" + derecha + "]=" + array[derecha]);
-        int indicePivote = particionar(array, izquierda, derecha, ind + "  ");
-        System.out.println(ind + "  Pivote " + array[indicePivote]
-                + " colocado en pos definitiva " + indicePivote
-                + "  →  " + str(array));
-        System.out.println();
-
-        System.out.println(ind + "  ── Subarreglo izquierdo [" + izquierda + ".." + (indicePivote - 1) + "] ──");
+        
+        int indicePivote = particionar(array, izquierda, derecha);
+        
+        printIndent();
+        System.out.println("Pivote colocado en indice " + indicePivote + ". Array actual: " + arrToString(array));
+        
         depth++;
         ordenar(array, izquierda, indicePivote - 1);
-        depth--;
-
-        System.out.println(ind + "  ── Subarreglo derecho [" + (indicePivote + 1) + ".." + derecha + "] ──");
-        depth++;
         ordenar(array, indicePivote + 1, derecha);
         depth--;
     }
 
-    // =========================================================================
-    // PARTICIONAR
-    // =========================================================================
-
-    private static int particionar(int[] array, int izquierda, int derecha, String ind) {
+    private static int particionar(int[] array, int izquierda, int derecha) {
         int pivote = array[derecha];
         int i = izquierda - 1;
-
-        System.out.println(ind + "Inicio partición  pivote=" + pivote
-                + "  i=" + i + "  array=" + str(array));
-
+        
+        printIndent();
+        System.out.println("Particionando con pivote=" + pivote);
+        
         for (int j = izquierda; j < derecha; j++) {
             if (array[j] <= pivote) {
+                printIndent();
+                System.out.println("  " + array[j] + " <= " + pivote + " -> Si. Intercambiamos posiciones " + (i+1) + " y " + j);
                 i++;
-                System.out.println(ind + "j=" + j + ": array[j]=" + array[j]
-                        + " ≤ pivote=" + pivote
-                        + "  →  VERDADERO  →  intercambiar pos " + i + " y " + j);
                 int temporal = array[i];
                 array[i] = array[j];
                 array[j] = temporal;
-                System.out.println(ind + "Array: " + str(array));
             } else {
-                System.out.println(ind + "j=" + j + ": array[j]=" + array[j]
-                        + " ≤ pivote=" + pivote
-                        + "  →  FALSO  →  no intercambiar");
+                printIndent();
+                System.out.println("  " + array[j] + " <= " + pivote + " -> No.");
             }
         }
-
-        System.out.println(ind + "Colocar pivote " + pivote
-                + ": intercambiar pos " + (i + 1) + " (frontera) y " + derecha + " (pivote)");
+        
+        printIndent();
+        System.out.println("  Intercambiamos el pivote " + array[derecha] + " con la posicion " + (i+1));
+        
         int temporal = array[i + 1];
         array[i + 1] = array[derecha];
         array[derecha] = temporal;
-        System.out.println(ind + "Array: " + str(array));
-
+        
         return i + 1;
     }
 
-    // =========================================================================
-    // MAIN
-    // =========================================================================
-
     public static void main(String[] args) {
-        System.out.println("╔══════════════════════════════════════╗");
-        System.out.println("║   QUICK SORT                         ║");
-        System.out.println("╚══════════════════════════════════════╝");
         int[] array = {5, 2, 8, 1, 9, 3};
-        System.out.println("Estado inicial: " + str(array));
-        System.out.println();
+        System.out.println("Inicio Quick Sort");
+        System.out.println("Estado inicial: " + arrToString(array) + "\n");
         depth = 0;
         ordenar(array, 0, array.length - 1);
-        System.out.println();
-        System.out.println("Estado final: " + str(array));
+        System.out.println("\nEstado final: " + arrToString(array));
     }
 }
