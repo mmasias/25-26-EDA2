@@ -48,11 +48,11 @@ public class InsertionSort {
 
     public static void ordenar(int[] array, int n) {
         printIndent(depth);
-        System.out.println("Llamada ordenar(n=" + n + ")");
+        System.out.println("[Descenso] Llamada ordenar(n=" + n + ")");
 
         if (n <= 1) {
             printIndent(depth);
-            System.out.println("Caso base alcanzado: n <= 1. El array ya esta ordenado.");
+            System.out.println("[Caso Base] Alcanzado: n <= 1. El array hasta este punto ya esta ordenado.");
             return;
         }
 
@@ -64,22 +64,22 @@ public class InsertionSort {
         int j = n - 2;
 
         printIndent(depth);
-        System.out.println("Volviendo de recursion, vamos a insertar el elemento " + ultimo);
+        System.out.println("[Ascenso] Retorno a n=" + n + ". Insertando el elemento " + ultimo + " en su posicion correcta.");
 
         while (j >= 0 && array[j] > ultimo) {
             printIndent(depth);
-            System.out.println("  array[" + j + "]=" + array[j] + " > " + ultimo + " -> Si. Desplazamos.");
+            System.out.println("  -> array[" + j + "]=" + array[j] + " > " + ultimo + " -> Si. Desplazamos.");
             array[j + 1] = array[j];
             j--;
         }
         if (j >= 0) {
             printIndent(depth);
-            System.out.println("  array[" + j + "]=" + array[j] + " > " + ultimo + " -> No.");
+            System.out.println("  -> array[" + j + "]=" + array[j] + " > " + ultimo + " -> No.");
         }
         array[j + 1] = ultimo;
 
         printIndent(depth);
-        System.out.println("  Elemento " + ultimo + " insertado. Array actual: " + arrToString(array));
+        System.out.println("  -> Elemento " + ultimo + " insertado. Estado parcial: " + arrToString(array));
     }
 
     public static void main(String[] args) {
