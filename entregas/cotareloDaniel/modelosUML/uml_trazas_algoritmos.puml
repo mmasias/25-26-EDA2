@@ -1,0 +1,80 @@
+@startuml
+
+title Trazas de algoritmos de ordenación
+
+class TrazasAlgoritmosOrdenacion {
+    {static} +main(args: String[]): void
+}
+
+class Formato {
+    {static} +formatear(array: int[]): String
+    {static} +sangria(nivel: int): String
+}
+
+class InsertionSort {
+    {static} -nivel: int
+    {static} +ordenar(array: int[]): void
+    {static} +ordenar(array: int[], n: int): void
+}
+
+class MergeSort {
+    {static} -nivel: int
+    {static} +ordenar(array: int[], izquierda: int, derecha: int): void
+    {static} +ordenarIterativo(array: int[]): void
+    {static} -fusionar(array: int[], izquierda: int, medio: int, derecha: int): void
+}
+
+class QuickSort {
+    {static} -nivel: int
+    {static} +ordenar(array: int[], izquierda: int, derecha: int): void
+    {static} -particionar(array: int[], izquierda: int, derecha: int): int
+}
+
+TrazasAlgoritmosOrdenacion ..> InsertionSort : ejecuta
+TrazasAlgoritmosOrdenacion ..> MergeSort : ejecuta
+TrazasAlgoritmosOrdenacion ..> QuickSort : ejecuta
+TrazasAlgoritmosOrdenacion ..> Formato : formatea estados
+
+InsertionSort ..> Formato : usa formato y sangría
+MergeSort ..> Formato : usa formato y sangría
+QuickSort ..> Formato : usa formato y sangría
+
+note right of TrazasAlgoritmosOrdenacion
+Ejecuta todos los algoritmos
+sobre el array del enunciado:
+
+int[] array = {5, 2, 8, 1, 9, 3}
+end note
+
+note bottom of Formato
+Métodos auxiliares permitidos:
+- formatear arrays
+- generar sangría para la recursión
+end note
+
+note bottom of InsertionSort
+Contiene:
+- Insertion Sort iterativo
+- Insertion Sort recursivo
+- trazas de comparaciones,
+  desplazamientos y caso base
+end note
+
+note bottom of MergeSort
+Contiene:
+- Merge Sort recursivo
+- Merge Sort iterativo
+- método fusionar
+- trazas de división,
+  comparación y modificación
+end note
+
+note bottom of QuickSort
+Contiene:
+- elección del pivote
+- comparaciones
+- intercambios
+- casos base recursivos
+end note
+
+@enduml
