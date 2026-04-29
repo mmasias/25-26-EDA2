@@ -26,29 +26,6 @@ La entrega queda dividida en las siguientes clases:
 
 Esta separación mejora la claridad porque cada archivo representa una única implementación. Así, la traza generada por cada clase corresponde únicamente a un algoritmo concreto, sin mezclarse con la salida de los demás.
 
-## Qué cambia respecto al código unificado
-
-La explicación general y la lógica de ordenación son las mismas. No se ha modificado el comportamiento interno de los algoritmos, únicamente se ha cambiado la estructura de presentación.
-
-Antes, todas las implementaciones estaban dentro de una sola clase. Ahora, cada algoritmo tiene su propio archivo y puede ejecutarse de forma independiente.
-
-Por ejemplo, en la versión unificada podía existir una única clase como:
-
-```java
-RetoRecuperacionTrazasSimple.java
-```
-
-En la versión separada, esa misma funcionalidad queda repartida en clases específicas:
-
-```java
-InsertionSortIterativoTraza.java
-InsertionSortRecursivoTraza.java
-MergeSortRecursivoTraza.java
-MergeSortIterativoTraza.java
-QuickSortTraza.java
-```
-
-La ventaja principal es que la corrección, revisión y ejecución de cada algoritmo resulta más sencilla.
 
 ## Trazabilidad implementada en cada clase
 
