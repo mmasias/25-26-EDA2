@@ -1,0 +1,41 @@
+@startuml
+title Reto de recuperacion - Trazas de ordenamiento
+
+skinparam classAttributeIconSize 0
+
+class AppOrdenamientos {
+    +main(args: String[]): void
+}
+
+class InsertionSort {
+    +ordenar(array: int[]): void
+    +ordenar(array: int[], n: int): void
+}
+
+class MergeSort {
+    +ordenar(array: int[], izquierda: int, derecha: int): void
+    +ordenarIterativo(array: int[]): void
+    -fusionar(array: int[], izquierda: int, medio: int, derecha: int): void
+}
+
+class QuickSort {
+    +ordenar(array: int[], izquierda: int, derecha: int): void
+    -particionar(array: int[], izquierda: int, derecha: int): int
+}
+
+class ConsolaTraza {
+    +mostrarEstado(mensaje: String, array: int[]): void
+    +mostrarEstadoIndentado(nivel: int, mensaje: String, array: int[]): void
+    +aplicarIndentacion(nivel: int): void
+    -mostrarArray(array: int[]): void
+}
+
+AppOrdenamientos --> InsertionSort : ejecuta
+AppOrdenamientos --> MergeSort : ejecuta
+AppOrdenamientos --> QuickSort : ejecuta
+
+InsertionSort ..> ConsolaTraza : muestra trazas
+MergeSort ..> ConsolaTraza : muestra trazas
+QuickSort ..> ConsolaTraza : muestra trazas
+
+@enduml
