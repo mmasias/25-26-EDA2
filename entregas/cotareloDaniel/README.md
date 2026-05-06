@@ -27,7 +27,6 @@ Traza para k = 22:
 Resultado: 22 existe.  
 Comparaciones: 4.
 
----
 
 ## 2. Mejor caso y peor caso
 
@@ -45,7 +44,6 @@ Traza:
 
 19 → 24 → 18 → 22 → 15 → 20 → 30 → 25 → 21
 
----
 
 ## 3. Algoritmo con menos comparaciones en peor caso
 
@@ -57,7 +55,6 @@ En esta matriz:
 
 5 + 5 - 1 = 9 comparaciones.
 
----
 
 # 2Think²
 
@@ -68,7 +65,6 @@ En esta matriz:
 Resultado: 21 existe.  
 Comparaciones: 9.
 
----
 
 ## 2. Prueba buscando 16
 
@@ -77,7 +73,6 @@ Comparaciones: 9.
 Resultado: 16 no existe.  
 Comparaciones: 9.
 
----
 
 ## 3. Arrancar desde el centro
 
@@ -87,7 +82,6 @@ Si se busca 15 y se empieza en el centro, se encuentra en 1 comparación.
 
 Pero no es mejor como algoritmo general, porque no siempre permite descartar una fila o una columna completa.
 
----
 
 # 2Think³
 
