@@ -70,4 +70,4 @@ Para el caso general de una matriz donde las filas y columnas están ordenadas d
 
 ### 1. Codificación en Java
 
-- [Archivo algoritmo BusquedaMatriz.java](./entregas/caicedoEsteban/src/BusquedaMatriz.java)
+- [Archivo algoritmo BusquedaMatriz.java](./caicedoEsteban/src/BusquedaMatriz.java)
