@@ -96,4 +96,4 @@ Por tanto, en el peor caso la esquina siempre gana o empata. Si el centro fuera 
 
 He implementado el algoritmo en Java empezando por la esquina superior derecha. Incluye un contador de comparaciones para comprobar las trazas anteriores.
 
-[BusquedaMatrizOrdenada.java](./entregas/coboIsmael/src/BusquedaMatrizOrdenada.java)
+[BusquedaMatrizOrdenada.java](./src/BusquedaMatrizOrdenada.java)
