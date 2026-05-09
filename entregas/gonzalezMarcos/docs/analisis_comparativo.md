@@ -36,22 +36,86 @@ Solo los cuadrantes **diagonal al pivote** pueden descartarse con certeza. Los o
 
 ## 2. Análisis de Complejidad
 
-Con tres llamadas recursivas sobre cuatro cuadrantes (cada uno de tamaño N/2 × M/2), la recurrencia es:
+### Paso 1 — Cuántas llamadas se hacen en cada nivel
+
+En cada llamada, el algoritmo divide la submatriz en cuatro cuadrantes iguales (cada uno de tamaño N/2 × N/2) y solo puede descartar uno de ellos con certeza. Por tanto, siempre lanza **3 llamadas recursivas** sobre los otros tres.
+
+Esto define la siguiente **recurrencia**:
 
 ```
 T(N) = 3 · T(N/2) + O(1)
+       ─────────────────────
+       │      │         │
+       │      │         └── trabajo hecho en este nivel (solo la comparación con el pivote)
+       │      └──────────── cada llamada trabaja sobre una submatriz de la mitad del tamaño
+       └─────────────────── se hacen 3 llamadas recursivas
 ```
 
-Por el **Teorema Maestro** (caso 1, a=3, b=2, f(N)=O(1)):
+### Paso 2 — Cuántos niveles tiene la recursión
+
+La submatriz se divide por la mitad en cada nivel. Partiendo de tamaño N, los niveles son:
 
 ```
-T(N) = O(N^(log₂ 3)) ≈ O(N^1.58)
+Nivel 0 → submatriz de tamaño N
+Nivel 1 → submatriz de tamaño N/2
+Nivel 2 → submatriz de tamaño N/4
+  ...
+Nivel k → submatriz de tamaño N/2^k
 ```
 
-| Caso | Comparaciones | Complejidad |
+La recursión para cuando la submatriz tiene tamaño 1 (un único elemento):
+
+```
+N / 2^k = 1  →  k = log₂(N)
+```
+
+Es decir, hay **log₂(N) niveles** en total.
+
+### Paso 3 — Cuánto trabajo se hace en total
+
+En cada nivel `i` existen `3^i` subproblemas activos, y cada uno hace O(1) trabajo (solo comparar con el pivote). El trabajo total es la suma de todos los niveles:
+
+```
+Total = 3^0 + 3^1 + 3^2 + ... + 3^(log₂N)
+      = suma de una serie geométrica de razón 3
+      = O(3^(log₂N))
+```
+
+Usando la identidad matemática `a^(log_b N) = N^(log_b a)`:
+
+```
+3^(log₂N) = N^(log₂3)
+```
+
+Como `log₂(3) ≈ 1.585`, la complejidad final es:
+
+```
+T(N) = O(N^1.58)
+```
+
+### Paso 4 — Aplicación del Teorema Maestro (verificación)
+
+La forma general del Teorema Maestro es `T(N) = a·T(N/b) + f(N)`.
+
+| Parámetro | Valor | Origen |
 |---|---|---|
-| **Mejor** | 1 — `k` es el pivote inicial | O(1) |
-| **Peor** | ∝ N^1.58 — se exploran tres cuadrantes en cada nivel | O(N^log₂3) |
+| `a = 3` | nº de llamadas recursivas | se descartan 3 cuadrantes de 4 |
+| `b = 2` | factor de reducción del tamaño | cada cuadrante es la mitad |
+| `f(N) = O(1)` | trabajo fuera de la recursión | solo una comparación con el pivote |
+| `N^(log_b a) = N^(log₂3) ≈ N^1.58` | término dominante | crece más rápido que f(N)=O(1) |
+
+Como `f(N) = O(1)` es asintóticamente menor que `N^1.58`, se aplica el **caso 1** del Teorema Maestro:
+
+```
+T(N) = Θ(N^(log₂3)) ≈ Θ(N^1.58)
+```
+
+### Resumen de casos
+
+| Caso | Situación | Complejidad |
+|---|---|---|
+| **Mejor** | `k` coincide con el primer pivote | O(1) |
+| **Peor** | `k` no existe o está en la última hoja explorada | O(N^1.58) |
 
 ---
 

@@ -30,7 +30,7 @@ La matriz tiene un invariante de orden: crece de forma estricta tanto hacia la d
 
 ## 3. Algoritmo: Búsqueda por Eliminación
 
-La idea central es arrancar desde la **esquina superior derecha** (fila 0, columna M−1) y, en cada paso, descartar una fila entera **o** una columna entera:
+La idea central es arrancar desde la esquina superior derecha (fila 0, columna M−1) y, en cada paso, descartar una fila entera o una columna entera:
 
 | Condición | Movimiento | Por qué es seguro |
 |---|---|---|
@@ -88,7 +88,7 @@ Se estudió también un enfoque basado en **Divide y Vencerás** (búsqueda por 
 gonzalezMarcos/
 ├── README.md                     
 ├── src/
-│   ├── Main.java                        ← punto de entrada, traza por consola
+│   ├── Main.java                        ← punto de entrada
 │   ├── MatrizOrdenada.java              ← modelo de datos
 │   └── BusquedaPorEliminacion.java      ← algoritmo de búsqueda
 ├── docs/
