@@ -28,13 +28,23 @@ public class BeMo {
         }
     }
 
-    private static boolean buscar(Elemento actual, int objetivo) {
+private static boolean buscar(Elemento actual, int objetivo) {
+
+    return buscar(actual, objetivo, 0);
+}
+
+    private static boolean buscar(Elemento actual, int objetivo, int nivel) {
 
         if (!esValido(actual)) return false;
 
-        System.out.println("Comparando: " + actual.valor);
+        indent(nivel);
+        System.out.println("→ [" + actual.fila + "," + actual.columna + "] = " + actual.valor);
 
         if (actual.valor == objetivo) {
+
+            indent(nivel);
+            System.out.println("✔ encontrado");
+
             return true;
         }
 
@@ -47,15 +57,28 @@ public class BeMo {
 
             if (enRango(nf, nc) && estado[nf][nc] == 1) {
 
-                Elemento siguiente = new Elemento(nf, nc, matriz[nf][nc]);
+                Elemento siguiente =
+                    new Elemento(nf, nc, matriz[nf][nc]);
 
-                if (buscar(siguiente, objetivo)) {
+                indent(nivel);
+                System.out.println("  ↳ probando [" + nf + "," + nc + "]");
+
+                if (buscar(siguiente, objetivo, nivel + 1)) {
                     return true;
                 }
             }
         }
 
+        indent(nivel);
+        System.out.println("↩ backtrack");
+
         return false;
+    }
+
+    private static void indent(int nivel) {
+        for (int i = 0; i < nivel; i++) {
+            System.out.print("   ");
+        }
     }
 
     private static Elemento mover(Elemento actual, int[] mov) {
