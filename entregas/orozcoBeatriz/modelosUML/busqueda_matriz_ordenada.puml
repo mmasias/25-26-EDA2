@@ -1,0 +1,36 @@
+@startuml busqueda_matriz_ordenada
+title Busqueda en matriz ordenada
+
+start
+
+:Recibir matriz y valor k;
+
+if (Matriz vacia?) then (si)
+    :Devolver no encontrado;
+    stop
+else (no)
+    :fila = 0;
+    :columna = numeroColumnas - 1;
+    :comparaciones = 0;
+endif
+
+while (fila < filas y columna >= 0?) is (si)
+    :actual = matriz[fila][columna];
+    :comparaciones++;
+
+    if (actual == k?) then (si)
+        :Devolver encontrado;
+        :Guardar fila, columna y comparaciones;
+        stop
+    elseif (actual > k?) then (si)
+        :columna--;
+    else (actual < k)
+        :fila++;
+    endif
+endwhile (no)
+
+:Devolver no encontrado;
+:Guardar comparaciones;
+
+stop
+@enduml

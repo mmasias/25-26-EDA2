@@ -1,4 +1,4 @@
-# RETO-004 - Busqueda en matriz ordenada
+# RETO-004 - Búsqueda en matriz ordenada
 
 La propuesta de clase está subida [aquí](https://github.com/beatriizorozco/25-26-EDA2/blob/reto-004/entregas/orozcoBeatriz/images/RETO-004_ALGORITMO.svg)
 
@@ -179,38 +179,25 @@ Asi que, para el caso concreto `k = 15`, arrancar del centro es mejor.
 ### Codigo del algoritmo en Java
 
 ```java
-public class BusquedaMatrizOrdenada {
+class ResultadoBusqueda {
+    boolean encontrado;
+    int fila;
+    int columna;
+    int comparaciones;
 
-    public static boolean buscarEnMatriz(int[][] matriz, int k) {
-        if (matriz == null || matriz.length == 0 || matriz[0].length == 0) {
-            return false;
-        }
-
-        int filas = matriz.length;
-        int columnas = matriz[0].length;
-
-        int fila = 0;
-        int columna = columnas - 1;
-
-        while (fila < filas && columna >= 0) {
-            int actual = matriz[fila][columna];
-
-            if (actual == k) {
-                return true;
-            } else if (actual > k) {
-                columna--;
-            } else {
-                fila++;
-            }
-        }
-
-        return false;
+    ResultadoBusqueda(boolean encontrado, int fila, int columna, int comparaciones) {
+        this.encontrado = encontrado;
+        this.fila = fila;
+        this.columna = columna;
+        this.comparaciones = comparaciones;
     }
+}
 
-    public static void buscarConTraza(int[][] matriz, int k) {
+class BuscadorMatrizOrdenada {
+
+    public ResultadoBusqueda buscar(int[][] matriz, int k) {
         if (matriz == null || matriz.length == 0 || matriz[0].length == 0) {
-            System.out.println("Matriz vacia");
-            return;
+            return new ResultadoBusqueda(false, -1, -1, 0);
         }
 
         int filas = matriz.length;
@@ -224,13 +211,8 @@ public class BusquedaMatrizOrdenada {
             int actual = matriz[fila][columna];
             comparaciones++;
 
-            System.out.println("Comparo " + k + " con " + actual
-                    + " en posicion (" + fila + ", " + columna + ")");
-
             if (actual == k) {
-                System.out.println("Encontrado en posicion (" + fila + ", " + columna + ")");
-                System.out.println("Comparaciones: " + comparaciones);
-                return;
+                return new ResultadoBusqueda(true, fila, columna, comparaciones);
             } else if (actual > k) {
                 columna--;
             } else {
@@ -238,8 +220,21 @@ public class BusquedaMatrizOrdenada {
             }
         }
 
-        System.out.println(k + " no esta en la matriz");
-        System.out.println("Comparaciones: " + comparaciones);
+        return new ResultadoBusqueda(false, -1, -1, comparaciones);
+    }
+}
+
+public class Main {
+
+    public static void mostrarResultado(int k, ResultadoBusqueda resultado) {
+        if (resultado.encontrado) {
+            System.out.println(k + " encontrado en posicion ("
+                    + resultado.fila + ", " + resultado.columna + ")");
+        } else {
+            System.out.println(k + " no esta en la matriz");
+        }
+
+        System.out.println("Comparaciones: " + resultado.comparaciones);
     }
 
     public static void main(String[] args) {
@@ -251,16 +246,18 @@ public class BusquedaMatrizOrdenada {
             {19, 24, 28, 33, 40}
         };
 
-        buscarConTraza(matriz, 22);
+        BuscadorMatrizOrdenada buscador = new BuscadorMatrizOrdenada();
+
+        mostrarResultado(22, buscador.buscar(matriz, 22));
         System.out.println();
 
-        buscarConTraza(matriz, 21);
+        mostrarResultado(21, buscador.buscar(matriz, 21));
         System.out.println();
 
-        buscarConTraza(matriz, 16);
+        mostrarResultado(16, buscador.buscar(matriz, 16));
         System.out.println();
 
-        buscarConTraza(matriz, 19);
+        mostrarResultado(19, buscador.buscar(matriz, 19));
     }
 }
 ```
@@ -284,3 +281,6 @@ Para k = 19:
 Encontrado en posicion (4, 0)
 Comparaciones: 9
 ```
+### Diagrama UML
+
+![Diagrama UML Búsqueda en matriz ordenada](https://github.com/beatriizorozco/25-26-EDA2/tree/reto-004/entregas/orozcoBeatriz/images/busqueda_matriz_ordenada.svg)
