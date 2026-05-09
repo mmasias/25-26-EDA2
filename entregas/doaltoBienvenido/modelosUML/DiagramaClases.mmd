@@ -1,0 +1,8 @@
+classDiagram
+    class Main {
+        +main(args: String[])
+    }
+    class BuscadorMatriz {
+        +buscar(matriz: int[][], k: int)
+    }
+    Main ..> BuscadorMatriz : "instancia y utiliza"
