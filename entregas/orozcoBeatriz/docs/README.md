@@ -283,4 +283,4 @@ Comparaciones: 9
 ```
 ### Diagrama UML
 
-| ![Diagrama UML Búsqueda en matriz ordenada](https://github.com/beatriizorozco/25-26-EDA2/tree/reto-004/entregas/orozcoBeatriz/images/busqueda_matriz_ordenada.svg) |
+<img src="https://raw.githubusercontent.com/beatriizorozco/25-26-EDA2/reto-004/entregas/orozcoBeatriz/images/busqueda_matriz_ordenada.svg" width="700">
