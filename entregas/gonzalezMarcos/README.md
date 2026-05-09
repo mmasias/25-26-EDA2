@@ -40,7 +40,7 @@ La idea central es arrancar desde la esquina superior derecha (fila 0, columna M
 
 ### Diagrama de flujo
 
-![Diagrama de flujo del algoritmo Saddleback Search](images/algoritmo_flujo.png)
+![Diagrama de flujo del algoritmo Saddleback Search](images/algoritmo_flujo.jpeg)
 
 ### Traza de ejecución para `k = 22`
 
