@@ -84,7 +84,7 @@ Se estudió también un enfoque basado en **Divide y Vencerás** (búsqueda por 
 
 ## 7. Segunda Parte del Reto
 
-El profesor planteó tres cuestiones adicionales: prueba del algoritmo con `k = 21` y `k = 16`, y el análisis de si existe algún caso concreto donde empezar del centro sea mejor que empezar de la esquina. La resolución completa se encuentra en [`docs/pruebas_y_analisis.md`](docs/pruebas_y_analisis.md).
+Se plantearon tres cuestiones adicionales: prueba del algoritmo con `k = 21` y `k = 16`, y el análisis de si existe algún caso concreto donde empezar del centro sea mejor que empezar de la esquina. La resolución completa se encuentra en [`docs/pruebas_y_analisis.md`](docs/pruebas_y_analisis.md).
 
 ---
 
