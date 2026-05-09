@@ -1,6 +1,6 @@
 # Entrega: Propuesta de Algoritmo de Búsqueda en Matriz
 
-Este documento constituye la entrega oficial del algoritmo optimizado para la búsqueda de valores en matrices con ordenación dual (filas y columnas ascendentes) [cite: 1].
+Este documento constituye la entrega oficial del algoritmo optimizado para la búsqueda de valores en matrices con ordenación dual (filas y columnas ascendentes).
 
 ---
 
