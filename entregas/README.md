@@ -1,37 +1,11 @@
-# Carpeta de entregas
+# Entrega: Propuesta de Algoritmo de Búsqueda en Matriz
 
-Para cada entrega, cree en esta carpeta su carpeta personal usando el estándar `apellidoNombre`.
+Este documento constituye la entrega oficial del algoritmo optimizado para la búsqueda de valores en matrices con ordenación dual (filas y columnas ascendentes) [cite: 1].
 
-## Estructura
+---
 
-```
-/entregas/apellidoNombre/README.md   <-- Presentación de la entrega
-                        /src         <-- Código fuente
-                        /modelosUML  <-- Modelos en plantUML
-                        /docs        <-- Documentación adicional
-                        /images      <-- Imágenes, diagramas...
-```
+## 🔗 Enlaces de la Entrega
 
-## Artefactos habituales
+*   **[Documentación y Explicación Teórica (README.md)](entregas/arceMarina/README.md)**: Contiene la descripción del algoritmo, el análisis de complejidad y las trazas paso a paso de los casos pedidos.
+*   **[Código Fuente en Java (BusquedaMatrizOrdenada.java)](entregas/arceMarina/src/BusquedaMatrizOdenada.java)**: Implementación funcional, interactiva y optimizada del algoritmo.
 
-||||
-|-|-|-|
-|1|**README.md**|Presentación de la entrega, con explicación de la solución y referencias al resto de artefactos. ¡Navegabilidad!|
-|2|**Código fuente**|Proyecto ordenado dentro de `/src`.|
-|3|**Diagramas**|Fuente en `/modelosUML`, exportado en `/images`, referenciado en los .md pertinentes.|
-|4|**Documentación adicional**|En `/docs`, en formato markdown (u otro formato, solo si se solicita explícitamente).|
-
-> Cada reto indicará qué artefactos son obligatorios y cuáles opcionales.
-
-## Criterios de valoración
-
-- **Proceso de creación** — commits bien descritos, un cambio por commit.
-- **Código limpio** — innegociable.
-- **Adecuado reparto de responsabilidades** entre módulos.
-- **Aplicación de lo visto en la vida, en el grado, en la asignatura y en las clases**, en ese orden.
-
-## Tenga en cuenta
-
-- **Planificar** antes de codificar (diagramas, esquemas, pseudocódigo).
-- **Construir código que se autoexplique**.
-- **Usar los commits** para documentar el proceso.
