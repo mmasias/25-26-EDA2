@@ -30,7 +30,7 @@ La matriz tiene un invariante de orden: crece de forma estricta tanto hacia la d
 
 ## 3. Algoritmo: Búsqueda por Eliminación
 
-La idea central es arrancar desde la esquina superior derecha (fila 0, columna M−1) y, en cada paso, descartar una fila entera o una columna entera:
+La idea central es empezar desde la esquina superior derecha (fila 0, columna M−1) y, en cada paso, descartar una fila entera o una columna entera:
 
 | Condición | Movimiento | Por qué es seguro |
 |---|---|---|
@@ -82,18 +82,25 @@ Se estudió también un enfoque basado en **Divide y Vencerás** (búsqueda por 
 
 ---
 
-## 7. Estructura del Proyecto
+## 7. Segunda Parte del Reto
+
+El profesor planteó tres cuestiones adicionales: prueba del algoritmo con `k = 21` y `k = 16`, y el análisis de si existe algún caso concreto donde empezar del centro sea mejor que empezar de la esquina. La resolución completa se encuentra en [`docs/pruebas_y_analisis.md`](docs/pruebas_y_analisis.md).
+
+---
+
+## 8. Estructura del Proyecto
 
 ```
 gonzalezMarcos/
-├── README.md                     
+├── README.md
 ├── src/
 │   ├── Main.java                        ← punto de entrada
 │   ├── MatrizOrdenada.java              ← modelo de datos
 │   └── BusquedaPorEliminacion.java      ← algoritmo de búsqueda
 ├── docs/
 │   ├── documentacion_clases.md          ← descripción de atributos y métodos
-│   └── analisis_comparativo.md          ← comparación con Divide y Vencerás
+│   ├── analisis_comparativo.md          ← comparación con Divide y Vencerás
+│   └── pruebas_y_analisis.md            ← segunda parte del reto
 ├── modelosUML/
 │   └── algoritmo.puml                   ← fuente PlantUML del diagrama de flujo
 └── images/
@@ -102,7 +109,7 @@ gonzalezMarcos/
 
 ---
 
-## 8. Ejecución
+## 9. Ejecución
 
 Salida:
 
