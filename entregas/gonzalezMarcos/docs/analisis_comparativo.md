@@ -1,4 +1,4 @@
-# Análisis Comparativo: Búsqueda por Eliminación vs. Divide y Vencerás
+# Análisis Comparativo: Búsqueda por Eliminación vs. Búsqueda por Cuadrantes
 
 > **Por qué es correcto, pero peor que la solución escogida.**
 
@@ -8,7 +8,7 @@
 
 ## 1. La Estrategia
 
-La idea parte de aplicar el paradigma de **Divide y Vencerás** a la búsqueda en una matriz ordenada, eligiendo siempre la **celda central** como pivote:
+La idea parte de aplicar el paradigma de **Divide y Vencerás** a la búsqueda en una matriz ordenada —de ahí el nombre **Búsqueda por Cuadrantes**—, eligiendo siempre la **celda central** como pivote:
 
 1. Tomar la celda central de la submatriz actual como pivote `M`.
 2. Si `k == M` → encontrado.
@@ -121,7 +121,7 @@ T(N) = Θ(N^(log₂3)) ≈ Θ(N^1.58)
 
 ## 3. Comparación entre algoritmos
 
-| Criterio | Busqueda por eliminación | Divide y Vencerás |
+| Criterio | Busqueda por eliminación | Búsqueda por Cuadrantes |
 |---|---|---|
 | **Complejidad peor caso** | **O(N + M)** | O(N^1.58) |
 | **Comparaciones (matriz 5×5)** | **máx. 9** | más de 9 en muchos casos |
@@ -133,6 +133,6 @@ Para la matriz del reto (5×5), busqueda por eliminación necesita como máximo 
 La clave está en qué **información se usa**:
 
 - **Busqueda por eliminación** aprovecha el orden de forma global: desde la esquina, cada comparación garantiza el descarte de una fila o columna completa, sin ambigüedad.
-- **D&C** solo aprovecha el orden de forma local respecto al pivote: descarta un cuadrante, pero debe explorar tres, introduciendo trabajo redundante.
+- **Búsqueda por Cuadrantes** solo aprovecha el orden de forma local respecto al pivote: descarta un cuadrante, pero debe explorar tres, introduciendo trabajo redundante.
 
 → [Volver a la solución original](../README.md)

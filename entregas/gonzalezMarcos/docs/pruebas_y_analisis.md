@@ -1,4 +1,4 @@
-# Segunda Parte del Reto: Pruebas y Análisis de Punto de Arranque
+# Segunda Parte del Reto: Pruebas y Análisis del Punto de Partida
 
 > → [Volver al README principal](../README.md)
 
@@ -42,7 +42,7 @@ El 16 **no existe** en la matriz. El algoritmo debe recorrer toda la frontera an
 
 Para la búsqueda de `k = 15` (el elemento que ocupa el **centro exacto** de la matriz, celda (F2, C2)):
 
-**Arrancando desde la esquina superior derecha:**
+**Empezando desde la esquina superior derecha:**
 
 | Paso | Celda | Valor | Decisión |
 |:---:|---|:---:|---|
@@ -54,7 +54,7 @@ Para la búsqueda de `k = 15` (el elemento que ocupa el **centro exacto** de la 
 
 **5 comparaciones desde la esquina.**
 
-**Arrancando desde el centro (F2, C2):**
+**Empezando desde el centro (F2, C2):**
 
 | Paso | Celda | Valor | Decisión |
 |:---:|---|:---:|---|
@@ -77,7 +77,7 @@ Solo el elemento que ocupa exactamente la celda central se encuentra en 1 compar
 El invariante que hace funcionar la búsqueda por eliminación es empezar desde una **esquina**: en ese punto, cualquier movimiento (bajar o ir a la izquierda) garantiza el descarte completo de una fila o columna. Desde el centro, esa garantía no existe: el elemento buscado puede estar en cualquiera de las cuatro direcciones, y no hay un movimiento único que descarte una fila o columna entera. Empezar del centro con este algoritmo rompería su corrección.
 
 **3. La única alternativa correcta desde el centro tiene peor coste.**
-Para buscar correctamente desde el centro, es obligatorio usar **Divide y Vencerás** (lanzar tres llamadas recursivas en cada nivel). Como se estudia en el [análisis comparativo](analisis_comparativo.md), eso tiene un coste de O(N^1.58) en el peor caso, frente al O(N+M) de la búsqueda por eliminación desde la esquina.
+Para buscar correctamente desde el centro, es obligatorio usar **Búsqueda por Cuadrantes** (lanzar tres llamadas recursivas en cada nivel). Como se estudia en el [análisis comparativo](analisis_comparativo.md), eso tiene un coste de O(N^1.58) en el peor caso, frente al O(N+M) de la búsqueda por eliminación desde la esquina.
 
 ### Demostración formal
 
