@@ -1,0 +1,36 @@
+@startuml algoritmo_saddleback
+
+skinparam backgroundColor #FAFAFA
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam ArrowColor #444444
+skinparam ActivityBorderColor #555555
+skinparam ActivityBackgroundColor #EEF4FF
+skinparam ActivityDiamondBackgroundColor #FFF9E6
+skinparam ActivityDiamondBorderColor #CC9900
+skinparam ActivityStartColor #2E7D32
+skinparam ActivityEndColor #C62828
+
+title Saddleback Search — Búsqueda por Eliminación en Matriz N×M
+
+start
+
+:Inicializar\n**fila = 0**\n**col  = M - 1**\n(esquina superior derecha);
+
+while (fila < N  AND  col >= 0) is (Sí — dentro de límites)
+  :Leer **valor = matriz[fila][col]**\nIncrementar comparaciones;
+
+  if (valor == k) then (Igual)
+    :Registrar posición\n[fila, col];
+    stop
+  elseif (valor < k) then (Menor)
+    :**fila = fila + 1**\n(descartar fila completa);
+  else (Mayor)
+    :**col = col - 1**\n(descartar columna completa);
+  endif
+endwhile (No — fuera de límites)
+
+:Elemento **no encontrado**;
+stop
+
+@enduml
