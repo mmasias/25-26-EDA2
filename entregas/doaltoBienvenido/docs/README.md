@@ -51,8 +51,19 @@ El algoritmo elegido empieza en la **esquina inferior izquierda** de la matriz. 
 ## Análisis de Complejidad
 
 - **Mejor caso**: 1 comparación (si el valor está en la esquina de inicio).
-- **Peor caso**: $N + M - 1$ comparaciones. Ocurre al buscar elementos en la esquina opuesta (ej: 21 o 40) o que no existen y obligan a recorrer el máximo camino posible.
+- **Peor caso**: $N + M - 1$ comparaciones. Ocurre al buscar elementos en la esquina opuesta (ej: 21) o que no existen y obligan a recorrer el máximo camino posible.
 - **¿Algoritmo mejor?**: No, para este tipo de matrices el coste mínimo es $O(N+M)$.
+
+## Modelo UML
+
+Para visualizar la arquitectura del proyecto, se ha diseñado el siguiente diagrama de clases:
+
+![Diagrama de Clases](../modelosUML/DiagramaClasesReto004.png)
+
+La estructura sigue el principio de **Responsabilidad Única**:
+- **Main**: Se encarga de la gestión de datos y la interacción con el usuario.
+- **BuscadorMatriz**: Encapsula exclusivamente la lógica del algoritmo de búsqueda.
+- **Relación**: `Main` depende de `BuscadorMatriz` mediante una relación de uso, instanciando la clase para delegar la búsqueda.
 
 ## Centro vs Esquina
 Arrancar del centro no es mejor porque una comparación en el centro solo descarta un cuadrante (1/4 de la matriz), mientras que desde la esquina cada paso descarta una fila o columna completa de forma garantizada, manteniendo una lógica lineal simple y óptima.
