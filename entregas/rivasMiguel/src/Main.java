@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main{
     public static void main(String[] args){
+        int elementoABuscar;
         int[][] matriz = {
             {2, 5, 9, 14, 21},
             {4, 7, 11, 17, 25},
@@ -8,17 +11,12 @@ public class Main{
             {19, 24, 28, 33, 40}
         };
 
-        int[] centro = obtenerCentro(matriz);
-        BeMo.buscarElemento(matriz, centro);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Indique el número que desea buscar en la matriz: ");
+        elementoABuscar = sc.nextInt();
+
+        BeMo.buscarElemento(matriz, elementoABuscar);
+
+        sc.close();
     }
-
-    public static int[] obtenerCentro(int[][] matriz) {
-        int filas = matriz.length;
-        int columnas = matriz[0].length;
-
-        int filaCentro = (filas - 1) / 2;
-        int columnaCentro = (columnas - 1) / 2;
-
-        return new int[]{filaCentro, columnaCentro};
-    } 
 }
