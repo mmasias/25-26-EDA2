@@ -17,9 +17,9 @@ public class BusquedaMatriz {
                 System.out.println("Encontrado en posición [" + fila + "][" + columna + "] - " + comparaciones + " comparaciones");
                 return true;
             } else if (matriz[fila][columna] > k) {
-                columna--;  // izquierda
+                columna--;  
             } else {
-                fila++;     // abajo
+                fila++;    
             }
         }
         
